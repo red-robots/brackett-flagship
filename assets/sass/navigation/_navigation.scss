@@ -1,0 +1,59 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+@import "links";
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@import "menus";
+
+
+.top {
+	width: 100%;
+	padding: 10px 0 25px 0;
+	background-color: #EDEDED;
+	border-bottom: 1px solid #ccc;
+}
+.top-nav {
+	width: auto;
+	display: inline-block;
+	margin: 0px auto;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		float: right;
+		margin: 0;
+	}
+	li {
+		width: auto;
+		display: inline-block;
+		float: left;
+		border-right: 1px solid #535362;
+		font-size: 14px;
+		font-family: 'Oswald', sans-serif;
+		text-transform:uppercase;
+		font-weight: 300;
+		a {
+			padding: 0 20px 0 20px;
+			color: #535362;
+		}
+	}
+	& li.last {
+		border-right: 0px solid #535362;
+		a {
+			padding: 0 0px 0 20px;
+		}
+	}
+}
+
+.tenant-login {
+	width: 60%;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	display: none;
+	background-color: #EDEDED;
+	padding: 30px;
+	z-index: 10000;
+}
+
