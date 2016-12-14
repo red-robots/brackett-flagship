@@ -7,6 +7,59 @@
 
 get_header(); ?>
 <div class="wrapper">
+
+<?php 
+// Query the Post type Slides
+$querySlides = array(
+	'post_type' => 'slides',
+	'posts_per_page' => '-1',
+	'orderby' => 'menu_order',
+	'order' => 'ASC'
+);
+// The Query
+$the_query = new WP_Query( $querySlides );
+?>
+<?php 
+// The Loop
+ if ( $the_query->have_posts()) : ?>
+ 
+<div class="flexslider">
+        <ul class="slides">
+        <?php while ( $the_query->have_posts() ) : ?>
+			<?php $the_query->the_post(); 
+			
+				$image = get_field('slide'); 
+				$url = $image['url'];
+				$title = $image['title'];
+				$alt = $image['alt'];
+				$caption = $image['caption'];
+				$size = 'slide';
+				$thumb = $image['sizes'][ $size ];
+				$width = $image['sizes'][ $size . '-width' ];
+				$height = $image['sizes'][ $size . '-height' ];
+			?>
+            
+            <li> 
+              
+             <img 
+                 src="<?php echo $thumb; ?>" 
+                 alt="<?php echo $alt; ?>" 
+                 title="<?php echo $title; ?>" 
+                 width="<?php echo $width; ?>" 
+                 height="<?php echo $height; ?>" />
+                
+            </li>
+            
+           <?php endwhile; ?>
+      	 </ul><!-- slides -->
+</div><!-- .flexslider -->
+ 
+ 
+         <?php endif; // end loop ?>
+
+         
+
+
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 

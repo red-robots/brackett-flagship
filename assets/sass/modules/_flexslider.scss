@@ -47,7 +47,8 @@
   margin: 0;
   padding: 0;
   position: relative;
-  top: 0;
+  float: left;
+  // top: 0;
   z-index: 1;
   zoom: 1;
 }
@@ -106,7 +107,7 @@ html[xmlns] .flexslider .slides, html[xmlns] .testimonial .slides {
 .testimonial .flex-direction-nav a {display: none;}
 .flex-direction-nav a {
   text-decoration: none;
-  background-image: url(../images/arrows.png);
+  background-image: url(images/arrows.png);
   background-repeat: no-repeat;
   text-indent: -900000px;
   display: block;

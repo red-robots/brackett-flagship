@@ -14,12 +14,26 @@ jQuery(document).ready(function ($) {
         }
 	});
 	
-	
+	$('.flexslider').imagesLoaded( function() {
+		$('.flexslider').flexslider({
+			animation: "fade",
+			slideshowSpeed: 5000,
+			// smoothHeight: true,
+		}); // end register flexslider
+	});
+
+	// $('.flexslider').flexslider({
+	// 		animation: "slide",
+	// 		slideshowSpeed: 5000,
+	// 		// smoothHeight: true,
+	// 	}); // end register flexslider
+
+
 	// Flexslider
 	// front page slider 
-	$('.flexslider').flexslider({
-		animation: "slide",
-	}); // end register flexslider
+	// $('.flexslider').flexslider({
+	// 	animation: "slide",
+	// }); 
 	
 	$('.testimonial').flexslider({
 		animation: "slide",

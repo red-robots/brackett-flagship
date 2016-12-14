@@ -8,7 +8,6 @@
 get_header(); ?>
 
 
-<div id="home-slider">
 <?php 
 // Query the Post type Slides
 $querySlides = array(
@@ -42,7 +41,12 @@ $the_query = new WP_Query( $querySlides );
             
             <li> 
               
-             <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" title="<?php echo $title; ?>" />
+             <img 
+                 src="<?php echo $thumb; ?>" 
+                 alt="<?php echo $alt; ?>" 
+                 title="<?php echo $title; ?>" 
+                 width="<?php echo $width; ?>" 
+                 height="<?php echo $height; ?>" />
                 
             </li>
             
@@ -55,11 +59,7 @@ $the_query = new WP_Query( $querySlides );
         
     <?php wp_reset_postdata(); ?>
     
-   <div class="wrapper-absolute"> <!--
-        <div class="title-box-blue">
-        	<h2>Health Care Real Estate Specialists</h2>
-        </div><!-- title-box-blue -->
-   </div><!-- wrapper absolute --> 
+  
    
    <div class="main-home-content">
    		<div class="wrapper">
@@ -76,6 +76,7 @@ $the_query = new WP_Query( $querySlides );
                 <div class="news-item">
                 <a href="<?php the_permalink(); ?>">
                 	<div class="date"><?php echo get_the_date('m.d.y'); ?></div>
+
                     <?php echo get_excerpt(15); ?>
                     </a>
                 </div><!-- news item -->
@@ -92,7 +93,7 @@ $the_query = new WP_Query( $querySlides );
 			$link = get_field('page_link');
             ?>
  			<div class="home-summary">
-            	<h2><?php echo $title; ?></h2>
+            	<h2><?php echo $title; ?> <span class="&#128512;">sa</span></h2>
                 <div class="home-summary-content"><?php the_content(); ?></div><!-- home summary content -->
                 <div class="clear"></div>
                 <?php if( $link != '' ) { ?>
@@ -103,7 +104,7 @@ $the_query = new WP_Query( $querySlides );
         </div><!-- wrapper -->
    </div><!-- main-home-content -->
    
-</div><!-- home slider -->
+
 <?php 
 // Let's get in homepage mode.
 $post = get_post(505); // My home "page" id = 505
@@ -124,6 +125,7 @@ $testimonials = get_posts(array(
 // now get out of homepage mode now that we have our testimonials.
 wp_reset_postdata();
 if( $testimonials ): ?>
+<section class="the-testis">
 <div class="wrapper">
     <div class="testimonial testimonial-home">
     	<ul class="slides">
@@ -149,6 +151,7 @@ if( $testimonials ): ?>
         </ul><!-- slides -->
     </div><!-- .testimonial -->
 </div><!-- wrapper -->
+</section>
 <?php endif; wp_reset_postdata(); ?>
 
 

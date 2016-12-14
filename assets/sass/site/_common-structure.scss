@@ -15,7 +15,7 @@
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1050px;
+		width: 90%;
 		padding: 0;
 	}
 }
@@ -31,12 +31,20 @@
 	}
 }
 header#masthead {
-	border-bottom: 5px solid #85101A;
+	border-bottom: 5px solid $color-red;
+}
+.red-border {
+	width: 100%;
+	float: left;
+	margin-top: 2px;
+		border-top: 2px solid $color-red;
 }
 #primary {
-	
+		width: 100%;
+		float: left;
+		margin-top: 24px;
 	@media screen and (min-width: $tabwidth) {
-		margin-top: 24px;overflow: hidden;
+		
 	}
 }
 .site {
@@ -133,7 +141,7 @@ header#masthead {
 	width: 100%;
 	display: inline-block;
 	float: right;
-	color: #262C77;
+	color: $color-blue;
 	font-size: 24px;
 	font-family: 'Oswald', sans-serif;
 	text-align: center;
@@ -151,7 +159,7 @@ header#masthead {
 }
 /* Footer */
 footer[role="contentinfo"] {
-	background-color:#191F40;
+	background-color:$color-light-grey;
 	padding: 10px 0;
 	clear: both;
 	font-family: 'Crimson Text', serif;
@@ -159,21 +167,21 @@ footer[role="contentinfo"] {
 	line-height: 2;
 	margin-left: auto;
 	margin-right: auto;
-	color: #888888;
+	color: $color-blue;
 	text-align: right;
 }
 footer[role="contentinfo"] a {
-	color: #888888;
+	// color: #888888;
 }
 footer[role="contentinfo"] a:hover {
-	color: #fff;
+	// color: #fff;
 }
 .footer-address {
 	font-size: 12px;
 	font-family: 'Oswald', sans-serif;
 	text-transform:uppercase;
 	font-weight: 300;
-	text-align: center;
+	text-align: right;
 	margin: 0 0 20px 0;
 	@media screen and (min-width: $tabwidth) {
 		text-align: right;

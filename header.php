@@ -71,13 +71,22 @@
             <div class="clear"></div>
         	<div class="phone"><?php the_field('phone_number','option'); ?></div>
         </div><!-- header-right -->
+
+        </div><!-- wrapper -->
         
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</div><!-- wrapper -->
+		
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+        <div class="wrapper">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                </div><!-- wrapper -->
+            </nav><!-- #site-navigation -->
+
+
+
+        <div class="red-border"></div>
+	
 	</header><!-- #masthead -->
 
 	<div id="main" class="">

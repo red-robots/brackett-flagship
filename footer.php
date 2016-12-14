@@ -13,11 +13,11 @@
 			$adClass = 'address-page';
 		} ?>
         
-        <div class="wrapper">
+       <!--  <div class="wrapper">
 			<div class="footer-address address-page<?php //echo $adClass; ?>">
-			<?php the_field('address', 'option'); ?>
+			<?php //the_field('address', 'option'); ?>
             </div>
-            </div>
+         </div> -->
             
             
 	<footer id="colophon" role="contentinfo">
@@ -26,9 +26,9 @@
 			$sitemap = get_field('sitemap_link', 'option');
 			$bw = 'http://bellaworksweb.com?site=bracketflagship';
 			
-			echo '<a href="'.$sitemap.'">sitemap</a> | site by <a target="_blank" href="'.$bw.'">Bellaworks</a>';
+			//echo '<a href="'.$sitemap.'">sitemap</a> | site by <a target="_blank" href="'.$bw.'">Bellaworks</a>';
 		?>
-        		
+        	<?php the_field('address', 'option'); ?>
 		</div><!-- .wrapper-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
