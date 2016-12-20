@@ -77,7 +77,7 @@ function acc_social_links() {
 		$snumber = 'socialsix';	
 	}
 	
-	echo '<div id="sociallinks" class="' . $snumber . '">';
+	echo '<div id="sociallinks" class="' . $snumber . ' clear-bottom">';
 	echo '<ul>';
 	
 	foreach ( $socials as $social ) {

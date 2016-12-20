@@ -169,8 +169,6 @@
 .main-home-content {
 	background-color: rgba(29,32,74,.7);
 	width: 100%;
-	position: relative;
-	z-index:100;
 	padding: 15px 0;
 	width: 100%;
 	@media screen and (min-width: $tabwidth) {
@@ -183,7 +181,15 @@
 		// margin: 0;
 	}
 }
-
+.main-home-content {
+  >.wrapper {
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+}
 .home-latest-news {
 	color: #fff;
 	width: auto;

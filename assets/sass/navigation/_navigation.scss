@@ -11,40 +11,49 @@
 
 .top {
 	width: 100%;
-	padding: 5px 0 5px 0;
+	padding: 10px 0;
 	background-color: #EDEDED;
 	border-bottom: 1px solid #ccc;
-	float: left;
 }
 .top-nav {
 	width: auto;
-	display: inline-block;
+	display: block;
 	margin: 0px auto;
 	position: relative;
 	@media screen and (min-width: $tabwidth) {
-		float: right;
 		margin: 0;
+        float: right;
 	}
-	li {
-		width: auto;
-		display: inline-block;
-		float: left;
-		border-right: 1px solid #535362;
-		font-size: 14px;
-		font-family: 'Oswald', sans-serif;
-		text-transform:uppercase;
-		font-weight: 300;
-		a {
-			padding: 0 20px 0 20px;
-			color: #535362;
-		}
-	}
-	& li.last {
-		border-right: 0px solid #535362;
-		a {
-			padding: 0 0px 0 20px;
-		}
-	}
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      width: auto;
+      display: block;
+      font-size: 14px;
+      font-family:  Calibri, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      @media screen and (min-width: $tabwidth) {
+        border-right: 1px solid #535362;
+        float: left;
+      }
+      a {
+        padding: 0 20px;
+        color: #535362;
+        text-decoration: none;
+      }
+    }
+    & li.last {
+      border-right: none;
+      a {
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+  }
 }
 
 .tenant-login {

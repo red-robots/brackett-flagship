@@ -36,7 +36,7 @@
 <div id="page" class="hfeed site">
 
 <div class="top">
-    <div class="top-wrapper">
+    <div class="top-wrapper clear-bottom">
         <div class="top-nav">
             <?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>
             
@@ -55,7 +55,7 @@
 </div><!-- top -->
 
 	<header id="masthead" class="site-header" role="banner">
-    <div class="wrapper">
+    <div class="wrapper clear-bottom">
 		<?php if(is_home()) { ?>
             <h1 class="logo">
             <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
@@ -68,7 +68,6 @@
         
        <div class="header-right"> 
 			<?php acc_social_links(); ?>
-            <div class="clear"></div>
         	<div class="phone"><?php the_field('phone_number','option'); ?></div>
         </div><!-- header-right -->
 

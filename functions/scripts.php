@@ -2,7 +2,9 @@
  // Enqueueing all the java script in a no conflict mode
  function ineedmyjava() {
 	if (!is_admin()) {
- 
+
+		wp_enqueue_style('customfonts', get_bloginfo('template_directory') . '/fonts/customwebfonts/MyFontsWebfontsKit.css');
+
 		wp_deregister_script('jquery');
 
 		wp_register_script(

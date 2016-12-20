@@ -1,9 +1,16 @@
 * { -webkit-hyphens: none; }
 
 .clear {clear: both;}
+.clear-bottom {
+  &:after {
+    clear:both;
+    content: "";
+    display: block;
+  }
+}
 /* Page structure */
-.wrapper, .top-wrapper {
-	margin: 0px auto;	
+.wrapper {
+	margin: 0px auto;
 	padding: 0 10px;
 }
 .wrapper {
@@ -22,6 +29,8 @@
 
 .top-wrapper {
 	text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
 	@media screen and (min-width: $tabwidth) {
 		text-align: right;
 	}
@@ -32,6 +41,19 @@
 }
 header#masthead {
 	border-bottom: 5px solid $color-red;
+  &:after {
+    clear:both;
+    display: block;
+    content:"";
+  }
+  >.wrapper {
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    @media screen and (min-width: $deskwidth) {
+      width: 1050px;
+      padding: 10px 0;
+    }
+  }
 }
 .red-border {
 	width: 100%;
@@ -99,15 +121,15 @@ header#masthead {
 }
 /* Logo */
 .logo , h1.logo {
-	width: 250px;
-	height: 94px;
+  width: 250px;
+  height: 94px;
 	background-image: url(images/logo.png);	
 	z-index: 1;
-	margin: -15px auto 20px auto;
+    margin: 0 auto 20px auto;
 	background-size: cover;
 	@media screen and (min-width: $tabwidth) {
-		margin-top: -25px;
 		float: left;
+      margin: -40px auto 0 auto;
 	}
 	@media screen and (min-width: $deskwidth) {
 
@@ -143,15 +165,16 @@ header#masthead {
 	float: right;
 	color: $color-blue;
 	font-size: 24px;
-	font-family: 'Oswald', sans-serif;
+	font-family: Calibri, sans-serif;
 	text-align: center;
-	margin: 5px 0 10px 0;
+    letter-spacing: 1px;
+    line-height: 1;
+	margin: 5px 0 0 0;
 	@media screen and (min-width: $tabwidth) {
 		width: auto;
 		float: right;
 		text-align: right;
-		margin:10px 0 0 0;
-		letter-spacing: 2px;
+		margin: 10px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 
