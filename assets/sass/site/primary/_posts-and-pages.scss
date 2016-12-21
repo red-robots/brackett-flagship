@@ -194,12 +194,11 @@
 .home-latest-news {
     width: 100%;
     padding: 10px;
-    margin: 0;
-    @media screen and (min-width: $tabwidth) {
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $midwidth) {
       width: 40%;
       float: left;
       padding: 10px 30px 0 0;
-      margin-bottom: 20px;
     }
     @media screen and (min-width: $deskwidth) {
 	}
@@ -240,14 +239,13 @@
 }
 .home-summary {
     background-color: rgba(29,32,74,.1);
-	width: 90%;
+	width: 100%;
 	position: relative;
     padding: 10px;
-  margin: 0;
-	@media screen and (min-width: $tabwidth) {
+  margin: 0 0 20px 0;
+	@media screen and (min-width: $midwidth) {
 		width: 60%;
 		float: right;
-      margin-bottom: 20px;
 	}
 	@media screen and (min-width: $deskwidth) {
 	}
@@ -325,8 +323,8 @@ section.the-testis {
 }
 .testimonial {
 	padding: 45px 4%;
-	border-top: 1px dotted $color-dark-red;
-	border-bottom: 1px dotted $color-dark-red;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
 	font-family: 'Crimson Text', serif;
 	text-align: center;
 	margin: 50px auto 30px auto;
@@ -342,12 +340,12 @@ section.the-testis {
 	background-color: #262D72;
 }
 .the-testimonial {
-	font-size: 24px;
-	font-weight: 400;
+	font-size: 23px;
+	font-weight: 500;
+    font-family: Calibri;
 	font-style: italic;
-	margin: 0 0 20px;
-	padding: 0 0 10px;
-	border-bottom: 1px dotted #fff;
+	margin: 0;
+	padding: 0;
 }
 .testi-creds {
 	display: inline-block;

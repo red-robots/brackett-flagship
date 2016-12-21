@@ -94,7 +94,7 @@ if ( $the_query->have_posts() ) : ?>
 			//$content = get_the_content();
 			$link = get_field( 'page_link' );
 			?>
-			<div class="home-summary">
+			<div class="home-summary clear-bottom">
 				<div class="home-summary-wrapper">
                     <h2><?php echo $title; ?></h2>
                     <div class="home-summary-content"><?php the_content(); ?></div><!-- home summary content -->

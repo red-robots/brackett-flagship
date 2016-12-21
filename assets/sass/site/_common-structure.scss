@@ -183,15 +183,23 @@ header#masthead {
 /* Footer */
 footer[role="contentinfo"] {
 	background-color:$color-light-grey;
-	padding: 10px 0;
+	padding: 20px;
 	clear: both;
-	font-family: 'Crimson Text', serif;
+	font-family: Calibri;
 	font-size: 14px;
-	line-height: 2;
-	margin-left: auto;
-	margin-right: auto;
+	line-height: 1.2;
+    letter-spacing: 1px;
+    margin: 0;
 	color: $color-blue;
 	text-align: right;
+    >.wrapper {
+      padding: 0;
+      margin: 0;
+      @media screen and (min-width: $deskwidth) {
+        width: 1050px;
+        padding: 20px 0;
+      }
+    }
 }
 footer[role="contentinfo"] a {
 	// color: #888888;

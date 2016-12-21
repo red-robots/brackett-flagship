@@ -217,18 +217,18 @@ html[xmlns] .flexslider .slides, html[xmlns] .testimonial .slides {
   width: 11px;
   height: 11px;
   display: block;
-  background: #9B0900;
-  border: 1px solid #9B0900;
+  background: transparent;
+  border: 1px solid white;
   border-radius: 0;
 }
 .testimonial .flex-control-paging li a:hover {
   background: #fff;
-  border: 1px solid #9B0900;
+  border: 1px solid white;
 }
 .testimonial .flex-control-paging li a.flex-active {
   background: #fff;
   cursor: default;
-  border: 1px solid #9B0900;
+  border: 1px solid white;
 }
 .flex-control-paging li a {
   width: 11px;
