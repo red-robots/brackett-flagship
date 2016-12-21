@@ -36,6 +36,9 @@
 	position: relative;
 	margin: 0px 3px;
 }
+#sociallinks  ul li:first-child {
+    margin-right: 0;
+}
 
 #sociallinks ul a {
 	text-decoration: none;
@@ -52,10 +55,10 @@
 }*/
 #sociallinks  .facebook a {
 	width: 25px;
-	background-position: -0px -0px;
+	background-position: -50px -0px;
 }	
 #sociallinks .facebook a:hover {
-	background-position: -0px -25px;
+	background-position: -50px -25px;
 }
 #sociallinks  .twitter a {
 	width: 25px;
@@ -67,11 +70,11 @@
 }
 #sociallinks  .linkedin a {
 	width: 25px;
-	background-position: -50px 0px;
+	background-position: -0px 0px;
 }
 	
 #sociallinks  .linkedin a:hover {
-	background-position: -50px -25px;
+	background-position: -0px -25px;
 }
 #sociallinks  .instagram a {
 	width: 25px;

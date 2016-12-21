@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
 		$('.flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 5000,
-			// smoothHeight: true,
+            smoothHeight: true,
 		}); // end register flexslider
 	});
 

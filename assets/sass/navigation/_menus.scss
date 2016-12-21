@@ -15,6 +15,13 @@
 	}
     >.wrapper {
       padding: 0 20px 20px 20px;
+      @media screen and (min-width: $tabwidth) {
+        padding: 10px 20px;
+      }
+      @media screen and (min-width: $deskwidth) {
+        width: 1050px;
+        padding: 10px 0;
+      }
     }
 	ul {
 		display: none;
@@ -24,12 +31,14 @@
 		text-indent: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
+            @media screen and (min-width: $tabwidth) {
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+              float: left;
+              position: absolute;
+              top: 1.5em;
+              left: -999em;
+              z-index: 99999;
+            }
 
 			ul {
 				left: -999em;
@@ -37,31 +46,37 @@
 			}
 
 			li {
-				float: left;
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
+              @media screen and (min-width: $tabwidth) {
+                float: left;
+                &:hover > ul,
+                &.focus > ul {
+                  left: 100%;
+                }
+              }
 			}
 
 			a {
-				width: 200px;
-				background: #85101A;
-				border-bottom: 1px dotted #fff;
-				display: block;
-				font-size: 14px;
-				line-height: 2.181818182;
-				padding: 8px 10px;
-				width: 220px;
-				white-space: normal;
-				color: #fff;
-				@include transition(all ease .3s);
+              color: #fff;
+              @media screen and (min-width: $tabwidth) {
+                width: 200px;
+                background: #85101A;
+                border-bottom: 1px dotted #fff;
+                display: block;
+                font-size: 14px;
+                line-height: 2.181818182;
+                padding: 8px 10px;
+                width: 220px;
+                white-space: normal;
+                @include transition(all ease .3s);
+              }
 			}
 
 			:hover > a,
 			.focus > a {
-				background-color: #262F70;
-				color: #fff;
+              color: #fff;
+              @media screen and (min-width: $tabwidth) {
+                background-color: #262F70;
+               }
 			}
 
 			a:hover,
@@ -75,18 +90,19 @@
 		}
 	}
 	li {
-		display: inline-block;
+        display: block;
 		position: relative;
-		margin-top: 24px;
-		line-height: 1.42857143;
+        font-family: Calibri, sans-serif;
+		padding: 12px 0;
+		line-height: 1;
 		font-size: 18px;
-
 		@media screen and (min-width: $tabwidth) {
 			border-bottom: 0;
-			line-height: 2;
+            display: inline-block;
 			text-transform: capitalize;
 			white-space: nowrap;
-			margin: 0 0px 0 40px;
+			margin: 0 30px;
+            padding: 0;
 			position: relative;
 			font-size: 20px;
 		}
@@ -96,7 +112,7 @@
 
 		&:hover > a,
 		&.focus > a {
-			color: #232852;
+			/*color: #232852;*/
 		}
 	}
 	a {

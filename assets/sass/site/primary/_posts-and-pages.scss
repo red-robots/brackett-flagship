@@ -167,22 +167,23 @@
 	}
 }
 .main-home-content {
-	background-color: rgba(29,32,74,.7);
 	width: 100%;
-	padding: 15px 0;
-	width: 100%;
-	@media screen and (min-width: $tabwidth) {
-		padding: 15px 0;
-		// margin: -200px 0 0 0;
+    @media screen and (min-width: $tabwidth) {
 	}
 	@media screen and (min-width: $deskwidth) {
-		// position: absolute;
-		// bottom: 0%;
-		// margin: 0;
 	}
 }
 .main-home-content {
   >.wrapper {
+    padding: 20px;
+    color: #241F45;
+    @media screen and (min-width: $tabwidth) {
+      padding: 40px;
+    }
+    @media screen and (min-width: $deskwidth) {
+      width: 1050px;
+      padding: 40px 0;
+    }
     &:after {
       clear: both;
       content: "";
@@ -191,84 +192,113 @@
   }
 }
 .home-latest-news {
-	color: #fff;
-	width: auto;
-	padding: 40px 20px 20px 20px;
-	margin: 10px auto;
-	@media screen and (min-width: $tabwidth) {
-
-	}
-	@media screen and (min-width: $deskwidth) {
-		width: 40%;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    @media screen and (min-width: $tabwidth) {
+      width: 40%;
+      float: left;
+      padding: 10px 30px 0 0;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $deskwidth) {
 	}
 	h2 {
-		font-size: 32px;
-		border-bottom: 1px dotted #fff;
-		padding: 5px 20px;
-		margin-bottom: 20px;
+		font-size: 29px;
+        font-family: Cambria;
+        padding: 20px 20px 5px 20px;
+        border-bottom: 1px dotted #9B0900;
+        font-weight: 500;
+		margin: 0;
 	}
 }
-.home-latest-news {
-	width: 100%;
-	float: left;
-	padding: 40px 20px 20px 20px;
-	margin: 0;
-	@media screen and (min-width: $tabwidth) {
-		width: 40%;
-	}
-	@media screen and (min-width: $deskwidth) {
-
-	}
-	h2 {
-		font-size: 32px;
-	}
+.home-latest-news-wrapper {
+  padding: 30px 30px 0 30px;
 }
 .home-latest-news .news-item {
 	font-size: 14px;
 	width: auto;
-	padding: 0px 20px;
-	margin: 0 0 30px 0;
-	font-weight: 400;
+	padding: 0;
+	margin: 20px 0 0 0;
+	font-weight: 500;
 	line-height: 1.2;
+    font-family: Cambria;
+  font-size: 16px;
+}
+.home-latest-news .news-item:first-child {
+  margin: 0;
 }
 .home-latest-news .news-item .date {
-	font-family: 'Oswald', sans-serif;
+	font-family: Calibri;
 	font-size: 24px;
 	width: 100%;
-	margin: 0 0 5px 0;
-	font-weight: 300;
+	font-weight: 500;
 }
-.news-item a {color: #fff;}
+.news-item a {
+  color: inherit;
+  text-decoration: none;
+}
 .home-summary {
+    background-color: rgba(29,32,74,.1);
 	width: 90%;
-	margin: 20px auto;
-	background-color: #fff;
 	position: relative;
-	padding: 40px 3% 5px 3%;	
+    padding: 10px;
+  margin: 0;
 	@media screen and (min-width: $tabwidth) {
-		width: 45%;
+		width: 60%;
 		float: right;
-		margin: 0;
-		padding: 40px 3% 5px 3%;
+      margin-bottom: 20px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 49%;
 	}
 
 }
+.home-summary-wrapper {
+  @media screen and (min-width: $tabwidth) {
+    padding: 0px 40px 0 20px;
+  }
+}
 .home-summary h2 {
-	font-size: 32px;
+	font-size: 29px;
+    font-family: Cambria;
+    font-weight: 500;
 	border-bottom: 1px dotted $color-dark-red;
-	padding: 5px 20px;
-	margin-bottom: 20px;
+    padding: 20px 10px 5px 10px;
+	margin: 0;
 	color: #241F45;
 }
-.home-summary-content {padding: 5px 20px 10px 20px;line-height: 1.2;}
+.home-summary-content {
+  padding: 20px 0 20px 10px;
+  line-height: 1.2;
+  font-size: 17px;
+  font-family: Calibri;
+}
+.home-summary-content *:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.home-summary-content *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .seemore {
 	width: auto;
 	display: inline-block;
 	float: right;
 }
+.seemore a {
+   width: auto;
+   display: block;
+   background-color: $color-dark-red;
+   padding: 15px 20px;
+   line-height: 1;
+   color: #fff;
+   font-weight: 500;
+   font-size: 18px;
+   font-family: Calibri;
+  text-decoration: none;
+   text-transform: uppercase;
+ }
 .seemore-team {
 	width: auto;
 	display: inline-block;
@@ -276,7 +306,7 @@
 	bottom: 10px;
 	right: 20px;
 }
-.seemore a, .seemore-team a {
+.seemore-team a {
 	width: auto;
 	display: block;
 	background-color: $color-dark-red;

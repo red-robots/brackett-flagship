@@ -71,6 +71,7 @@ if ( $the_query->have_posts() ) : ?>
 					'posts_per_page' => 3
 				) );
 				if ( $wp_query->have_posts() ) : ?>
+                    <div class="home-latest-news-wrapper">
 					<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 						<div class="news-item">
 							<a href="<?php the_permalink(); ?>">
@@ -79,7 +80,9 @@ if ( $the_query->have_posts() ) : ?>
 								<?php echo get_excerpt( 15 ); ?>
 							</a>
 						</div><!-- news item -->
-					<?php endwhile; endif; ?>
+					<?php endwhile;?>
+                    </div><!--.home-latest-news-wrapper-->
+                <?php endif; ?>
 			</div><!-- home latest news-->
 
 			<?php
@@ -92,9 +95,10 @@ if ( $the_query->have_posts() ) : ?>
 			$link = get_field( 'page_link' );
 			?>
 			<div class="home-summary">
-				<h2><?php echo $title; ?> <span class="&#128512;">sa</span></h2>
-				<div class="home-summary-content"><?php the_content(); ?></div><!-- home summary content -->
-				<div class="clear"></div>
+				<div class="home-summary-wrapper">
+                    <h2><?php echo $title; ?></h2>
+                    <div class="home-summary-content"><?php the_content(); ?></div><!-- home summary content -->
+                </div><!--.home-summary-wrapper-->
 				<?php if ( $link != '' ) { ?>
 					<div class="seemore"><a href="<?php echo $link; ?>">Meet Our Team</a></div><!-- seemore -->
 				<?php } ?>

@@ -79,7 +79,8 @@ function acc_social_links() {
 	
 	echo '<div id="sociallinks" class="' . $snumber . ' clear-bottom">';
 	echo '<ul>';
-	
+
+	$socials = array_reverse($socials);
 	foreach ( $socials as $social ) {
 		echo '<li class="'. $social['class'] . '">';
 		echo '<a href="' . $social['link'] . '" target="_blank">';
