@@ -11,9 +11,47 @@ get_header(); ?>
             <div id="content" role="main">
 				<?php if ( have_posts() ) : the_post(); ?>
                     <div class="entry-content">
+                        <?php $post = get_post(5);
+                        setup_postdata($post);
+                        $properies_header = get_field("properties_header");
+                        $faqs_header = get_field("faqs_header");
+                        wp_reset_postdata();?>
                         <h1><?php the_title(); ?></h1>
 						<?php the_content(); ?>
+                        <?php if($properies_header):?>
+                            <h2><?php echo $properies_header;?></h2>
+                        <?php endif; ?>
+                        <?php $args = array(
+	                        'post_type'      => 'property',
+	                        'posts_per_page' => 6,
+	                        'orderby'        => 'rand',
+                        );
+                        $query = new WP_Query($args);
+                        if($query->have_posts()):?>
+                            <div class="representative-experience clear-bottom">
+                                <?php while($query->have_posts()):
+                                    $query->the_post();
+	                                $image   = get_field( 'image_of_property' );
+	                                $title   = $image['title'];
+	                                $alt     = $image['alt'];
+	                                $size    = 'property';
+	                                $thumb   = $image['sizes'][ $size ];?>
+                                    <?php if($image):?>
+                                        <div class="experience js-blocks">
+                                            <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" title="<?php echo $title; ?>"/>
+                                            <div class="overlay">
+
+                                            </div><!--.overlay-->
+                                        </div><!--.experience-->
+                                    <?php endif;
+                                endwhile;?>
+                            </div><!--.representative-experience-->
+                        <?php wp_reset_postdata();
+                        endif;?>
 						<?php if ( have_rows( 'faqs' ) ): ?>
+							<?php if($faqs_header):?>
+                                <h2><?php echo $faqs_header;?></h2>
+							<?php endif; ?>
                             <div class="faqs">
 								<?php while ( have_rows( 'faqs' ) ): the_row();
 
@@ -108,21 +146,21 @@ get_header(); ?>
                                     <div class="sideperson-title">
                                         <?php the_title(); ?>
                                     </div><!--sideperson-->
-                                    <?php if($job_title){ ?>
+                                    <?php if($job_title): ?>
                                         <div class="sideperson-job-title">
                                             <?php echo $job_title; ?>
                                         </div><!--.sideperson-job-title-->
-                                    <?php } ?>
-                                    <?php if($direct_phone){ ?>
+                                    <?php endif; ?>
+                                    <?php if($direct_phone): ?>
                                         <div class="sideperson-direct-phone">
                                             <?php echo $direct_phone; ?>
                                         </div><!--.sideperson-job-title-->
-                                    <?php } ?>
-                                    <?php if($email){ ?>
+                                    <?php endif; ?>
+                                    <?php if($email): ?>
                                         <div class="sideperson-email">
                                             <?php echo $email; ?>
                                         </div><!--.sideperson-job-title-->
-                                    <?php } ?>
+                                    <?php endif; ?>
                                 </div><!--.info-->
                             </a>
                         </div><!--sideperson-->
@@ -166,11 +204,11 @@ get_header(); ?>
                                     <div class="sideperson-title">
                                         <?php the_title(); ?>
                                     </div><!--sideperson-->
-                                    <?php if($job_title){ ?>
+                                    <?php if($job_title): ?>
                                         <div class="sideperson-job-title">
                                             <?php echo $job_title; ?>
                                         </div><!--.sideperson-job-title-->
-                                    <?php } ?>
+                                    <?php endif; ?>
                                 </div><!--.info-->
                             </a>
                         </div><!--sideperson-->
@@ -213,21 +251,22 @@ get_header(); ?>
                             <li>
                                 <div class="the-testimonial"><?php echo $testimonial; ?></div>
                                 <div class="testi-creds">
-                                    <?php if($reviewer_name) { ?>
+                                    <?php if($reviewer_name): ?>
                                         <div class="the-testimonial-name">
                                             <div class="reviewer-name"><?php echo $reviewer_name; ?></div>
-                                            <?php if($reviewer_title){ ?>
+                                            <?php if($reviewer_title): ?>
                                                 <div class="reviewer-title"><?php echo $reviewer_title; ?></div>
-                                            <?php } ?>
+                                            <?php endif; ?>
                                         </div>
-                                    <?php } else { ?>
+                                    <?php else: ?>
                                         <div class="the-testimonial-name"><?php echo $title; ?></div>
-									<?php } if ( $job_title != '' ) {
+									<?php endif;
+									if ( $job_title != '' ) :
 										echo '<div class="the-testimonial-jt">, ' . $job_title . '</div>';
-									} ?>
-									<?php if ( $company != '' ) {
+									endif; ?>
+									<?php if ( $company != '' ) :
 										echo '<div class="the-testimonial-company">, ' . $company . '</div>';
-									} ?>
+									endif; ?>
                                 </div><!-- creds -->
                             </li>
 
