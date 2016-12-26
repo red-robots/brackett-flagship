@@ -1,5 +1,15 @@
-* { -webkit-hyphens: none; }
-
+* { -webkit-hyphens: none; font-size: 100%;}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'Crimson Text', serif;
+}
 .clear {clear: both;}
 .clear-bottom {
   &:after {
@@ -26,7 +36,14 @@
 		padding: 0;
 	}
 }
-
+#main {
+  >.wrapper {
+    @media screen and (min-width: $deskwidth) {
+      width: 1050px;
+      margin: 0 auto;
+    }
+  }
+}
 .top-wrapper {
 	text-align: center;
   padding: 0 20px;
@@ -68,7 +85,65 @@ header#masthead {
 	@media screen and (min-width: $tabwidth) {
 		
 	}
+  &.left-column {
+    @media screen and (min-width: $tabwidth) {
+      width: 65%;
+    }
+  }
 }
+aside.right-column {
+  float: right;
+  width: 100%;
+  @media screen and (min-width: $tabwidth) {
+    width: 28%;
+  }
+  .testimonial {
+    width: 100%;
+    margin: 24px 0 40px 0;
+    padding: 30px;
+    text-align: left;
+    line-height: 1.2;
+    .flex-control-nav {
+      bottom: -30px;
+      line-height: 1;
+      li {
+        a {
+          border: 1px solid #85101A;
+          &.flex-active {
+            background-color: #85101A;
+          }
+        }
+      }
+    }
+    .the-testimonial {
+      >*:first-child {
+        margin-top: 0;
+        padding-top: 0;
+      }
+      >*:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed white;
+
+      font-size: 17px;
+    }
+    .testi-creds {
+      font-size: 17px;
+      display: block;
+      .the-testimonial-name {
+        font-size: inherit;
+        font-weight: 500;
+        .reviewer-name {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
 .site {
 	padding: 0px;
 	background-color: #fff;
@@ -197,7 +272,7 @@ footer[role="contentinfo"] {
       margin: 0;
       @media screen and (min-width: $deskwidth) {
         width: 1050px;
-        padding: 20px 0;
+        margin: 0 auto;
       }
     }
 }

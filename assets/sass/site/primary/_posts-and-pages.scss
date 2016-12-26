@@ -54,25 +54,21 @@
 .service-list {
 	width: 100%;
 	margin: 24px auto;
-	@media screen and (min-width: $tabwidth) {
-		width: 28%;
-		float: right;
-		margin: 90px 0 0 0;
-	}
+  @media screen and (min-width: $tabwidth) {
+    margin: 90px 0 0 0;
+  }
 }
 
-
+.contact-text {
+  width: 100%;
+  margin: 24px auto 12px auto;
+  color: #85101A;
+  font-size: 15px;
+  font-family: Cambria;
+}
 .person-list {
 	width: 100%;
-	margin: 24px auto;
-	@media screen and (min-width: $tabwidth) {
-		width: 28%;
-		float: right;
-		margin: 20px 0 80px 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-
-	}
+	margin: 12px auto 24px auto;
 }
 .teamlist {
 	width: 90%;
@@ -321,6 +317,7 @@ section.the-testis {
 	width: 100%;
 	float: left;
 }
+
 .testimonial {
 	padding: 45px 4%;
 	border-top: 1px dotted white;
@@ -371,32 +368,74 @@ section.the-testis {
 	width: 100%;
 	margin: 5px 0 5px 0;
 	overflow: hidden;
+    font-family: Cambria;
+    &.featured {
+      border: 2px solid #262C77;
+      padding: 10px;
+      .sideperson-thumb {
+        width: 34%;
+        @media screen and (min-width: $tabwidth) {
+          width: 44%;
+        }
+        @media screen and (min-width: $deskwidth) {
+          width: 34%;
+        }
+      }
+      .info {
+        width: 66%;
+        @media screen and (min-width: $tabwidth) {
+          width: 56%;
+        }
+        @media screen and (min-width: $deskwidth) {
+          width: 66%;
+        }
+      }
+    }
 }
 .sideperson a {color: #52525F; display: block;line-height: 0;}
 .sideperson a:hover {color: $color-red;}
 .sideperson-thumb {
-	width: 75px;
-	height: 75px;
+	width: 30%;
 	float: left;
-	margin: 0 20px 0 0;
+	padding: 0 20px 0 0 ;
+  @media screen and (min-width: $tabwidth) {
+    width: 40%;
+  }
+  @media screen and (min-width: $deskwidth) {
+    width: 30%;
+  }
 }
 .sideperson-thumb img {width: 100%;}
-.sideperson-title {
-	width: 100%;
+.sideperson .info {
+  width: 70%;
+  float: left;
+  @media screen and (min-width: $tabwidth) {
+    width: 60%;
+  }
+    @media screen and (min-width: $deskwidth) {
+    width: 70%;
+  }
+}
+.info .sideperson-title {
 	font-size: 16px;
-	float: left;
-	margin: 0 0 20px 0;
-	padding: 10px 0;
-	line-height: 1.0;
-	padding: 5px 0 0 0;
+	margin: 0 0 5px 0;
+	line-height: 1.2;
+	padding: 0 0 2px 0;
+  border-bottom: 1px dashed #85101A;
 	@media screen and (min-width: $deskwidth) {
-		width: 190px;
 		height: auto;
-		line-height: normal;
-		height: 75px;
-		margin: 0;	padding: 0px 0 0 0;
 		font-size: 14px;
 	}
+}
+.info .sideperson-job-title,.info .sideperson-direct-phone,.info .sideperson-email {
+  line-height: 1.2;
+  font-size: 16px;
+  @media screen and (min-width: $deskwidth) {
+    font-size: 14px;
+  }
+}
+.sideperson-email {
+  word-break: break-all;
 }
 /* = Pages and Page Templates
 -------------------------------------------------------------- */
@@ -710,10 +749,12 @@ ul.ourteam-list li a.active {color: $color-dark-red;}
 }
 ul.listings li {
 	margin: 5px 0;
-	font-size: 15px;	
+	font-size: 15px;
+    line-height: 1;
 }
 ul.listings li a {
 	color: $color-red;
+  font-family: 'Crimson Text', serif;
 }
 ul.listings li ul.children li {
 	margin: 5px 0 5px 8px;
