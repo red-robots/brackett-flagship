@@ -18,6 +18,16 @@ body {
     display: block;
   }
 }
+.copy {
+  >*:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  >*:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
 /* Page structure */
 .wrapper {
 	margin: 0px auto;

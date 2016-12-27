@@ -46,7 +46,16 @@ jQuery(document).ready(function ($) {
 		width: '80%', 
 		height: '80%'
 	});
-	
+    $('a.popup-link').colorbox({
+        className: 'rep-e-colorbox',
+        rel:'gal',
+        inline: true,
+        width: '90%',
+        maxWidth: '960px',
+        previous: "< Previous Project",
+        next: "Next Project >",
+        close: '<i class="fa fa-times" aria-hidden="true"></i>',
+    });
 	//Isotope with images loaded ...
 	var $container = $('#container').imagesLoaded( function() {
   	$container.isotope({
