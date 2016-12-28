@@ -904,14 +904,18 @@ aside.right-column .testimonial .testi-creds .the-testimonial-name{font-size:inh
 aside.right-column .testimonial .testi-creds .the-testimonial-name .reviewer-name{font-weight:700}
 .site{padding:0;background-color:#fff}
 @media screen and (min-width:600px){.site{margin:0 auto;overflow:hidden;padding:0}
-}.site-content{margin:24px 0 0}
-@media screen and (min-width:600px){.site-content{float:left;width:65.104166667%;margin:0}
+}#primary.site-content{margin:24px 0 0}
+@media screen and (min-width:600px){#primary.site-content{float:left;width:65.104166667%;margin:0}
 }.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
 .widget-area{width:100%;margin:24px 0 0}
 @media screen and (min-width:600px){.widget-area{float:right;width:26.041666667%;margin:80px 0 0 0}
 }@media screen and (min-width:1200px){}
+.widget-area .widget{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-bottom:48px;word-wrap:break-word}
+.widget-area .widget h3{margin-bottom:24px;font-size:14px;font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:300;color:#525261}
+.widget-area .widget ul li{font-size:13px;line-height:1.846153846}
+.widget-area .widget ul li a{color:#757575}
 .logo,h1.logo{width:250px;height:94px;background-image:url(images/logo.png);z-index:1;margin:0 auto 20px auto;background-size:cover}
 @media screen and (min-width:600px){.logo,h1.logo{float:left;margin:-40px auto 0 auto}
 }.logo a,h1.logo a{width:250px;height:94px;display:block;text-indent:-9000px}
@@ -935,7 +939,7 @@ section[role="banner"]{margin-bottom:48px}
 .page-links{clear:both;margin:0 0 1.5em}
 .viewlistings-map{width:100%;margin:0 0 10px 0}
 .viewlistings-map a{width:100%;padding:20px 0;background-color:#85101a;color:#fff;display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:14px;text-align:center}
-@media screen and (min-width:600px){.property-content{float:left;width:75.104166667%}
+@media screen and (min-width:600px){#primary.property-content{float:left;width:75.104166667%}
 }.service-list{width:100%;margin:24px auto}
 @media screen and (min-width:600px){.service-list{margin:90px 0 0 0}
 }.contact-text{width:100%;margin:24px auto 12px auto;font-size:15px;font-family:Cambria}
@@ -943,7 +947,8 @@ section[role="banner"]{margin-bottom:48px}
 .teamlist{width:90%;margin:24px auto;padding:2%}
 @media screen and (min-width:600px){.teamlist{width:20%;float:right;margin:115px 0 0 0;padding:15px}
 }.property-list{width:100%;margin:24px auto}
-.property-list-content{padding:2%}
+@media screen and (min-width:600px){.property-list{width:20%;float:right;margin:100px 0 0 0}
+}.property-list-content{padding:2%}
 @media screen and (min-width:600px){.property-list-content{padding:15px}
 }.teamlist,.property-list-content{background-color:#ededed;border:1px solid #ceccd0}
 .teamlist h3,.property-list-content h3{margin-bottom:24px;font-size:14px;font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:300;color:#525261}

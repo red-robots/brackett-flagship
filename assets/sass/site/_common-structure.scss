@@ -166,7 +166,7 @@ aside.right-column {
 
 	}
 }
-.site-content {
+#primary.site-content {
 	margin: 24px 0 0;
 	@media screen and (min-width: $tabwidth) {
 		float: left;
@@ -203,6 +203,30 @@ aside.right-column {
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
+  .widget {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 48px;
+    word-wrap: break-word;
+    h3 {
+      margin-bottom: 24px;
+      font-size: 14px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #525261;
+    }
+    ul {
+      li {
+        font-size: 13px;
+        line-height: 1.846153846;
+        a {
+          color: #757575;
+        }
+      }
+    }
+  }
 }
 /* Logo */
 .logo , h1.logo {
