@@ -1073,6 +1073,27 @@ ul.ourteam-list li a.active{color:#9b0900}
 ul.listings li a{color:#85101a;font-family:'Crimson Text',serif}
 ul.listings li ul.children li{margin:5px 0 5px 8px}
 ul.listings li ul.children li a{color:#535362}
+.template-rep-e #primary{width:100%}
+.template-rep-e #primary .entry-content .representative-experience .experience{position:relative;float:left;width:100%;margin:0 0 4% 0}
+@media screen and (min-width:600px){.template-rep-e #primary .entry-content .representative-experience .experience{width:48%}
+.template-rep-e #primary .entry-content .representative-experience .experience:nth-child(odd){margin:0 4% 4% 0}
+.template-rep-e #primary .entry-content .representative-experience .experience:nth-child(even){margin:0 0 4% 0}
+}@media screen and (min-width:900px){.template-rep-e #primary .entry-content .representative-experience .experience{width:32%}
+.template-rep-e #primary .entry-content .representative-experience .experience:nth-child(odd){margin:0 0 2% 0}
+.template-rep-e #primary .entry-content .representative-experience .experience:nth-child(even){margin:0 0 2% 0}
+.template-rep-e #primary .entry-content .representative-experience .experience.countmod3-0,.template-rep-e #primary .entry-content .representative-experience .experience.countmod3-1{margin:0 2% 2% 0}
+}@media screen and (min-width:1200px){.template-rep-e #primary .entry-content .representative-experience .experience{width:23.5%}
+.template-rep-e #primary .entry-content .representative-experience .experience:nth-child(odd){margin:0 0 2% 0}
+.template-rep-e #primary .entry-content .representative-experience .experience:nth-child(even){margin:0 0 2% 0}
+.template-rep-e #primary .entry-content .representative-experience .experience.count-0,.template-rep-e #primary .entry-content .representative-experience .experience.count-1,.template-rep-e #primary .entry-content .representative-experience .experience.count-2{margin:0 2% 2% 0}
+}.template-rep-e #primary .entry-content .representative-experience .experience img{width:100%;display:block}
+.template-rep-e #primary .entry-content .representative-experience .experience:hover .overlay{opacity:1}
+.template-rep-e #primary .entry-content .representative-experience .experience .overlay{position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;background-color:rgba(38,44,119,0.4);opacity:0;font-family:Calibri;font-size:14px;color:white;padding:20px;overflow:hidden}
+@media screen and (min-width:350px){.template-rep-e #primary .entry-content .representative-experience .experience .overlay{font-size:19px;padding:30px}
+}@media screen and (min-width:1200px){.template-rep-e #primary .entry-content .representative-experience .experience .overlay{padding:35px 30px;font-size:16px}
+}.template-rep-e #primary .entry-content .representative-experience .experience .overlay .learn-more{margin-top:15px}
+.template-rep-e #primary .entry-content .representative-experience .experience .overlay .learn-more a{text-transform:uppercase;color:inherit}
+.template-rep-e #primary .entry-content .representative-experience .experience .hidden{display:none}
 .template-services .entry-content h2{font-family:Cambria;font-size:18px;margin:24px 0 5px 0}
 .template-services .entry-content .representative-experience .experience{position:relative;float:left;width:100%;margin:0 0 4% 0}
 @media screen and (min-width:900px){.template-services .entry-content .representative-experience .experience{width:48%}
@@ -1080,12 +1101,13 @@ ul.listings li ul.children li a{color:#535362}
 .template-services .entry-content .representative-experience .experience:nth-child(even){margin:0 0 4% 0}
 }@media screen and (min-width:1200px){.template-services .entry-content .representative-experience .experience{width:32%}
 .template-services .entry-content .representative-experience .experience:nth-child(odd){margin:0 0 2% 0}
+.template-services .entry-content .representative-experience .experience:nth-child(even){margin:0 0 2% 0}
 .template-services .entry-content .representative-experience .experience.count-0,.template-services .entry-content .representative-experience .experience.count-1{margin:0 2% 2% 0}
 }.template-services .entry-content .representative-experience .experience img{width:100%;display:block}
 .template-services .entry-content .representative-experience .experience:hover .overlay{opacity:1}
 .template-services .entry-content .representative-experience .experience .overlay{position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;background-color:rgba(38,44,119,0.4);opacity:0;font-family:Calibri;font-size:14px;color:white;padding:20px;overflow:hidden}
 @media screen and (min-width:350px){.template-services .entry-content .representative-experience .experience .overlay{font-size:19px;padding:30px}
-}@media screen and (min-width:1200px){.template-services .entry-content .representative-experience .experience .overlay{padding:20px;font-size:14px}
+}@media screen and (min-width:1200px){.template-services .entry-content .representative-experience .experience .overlay{padding:30px 20px;font-size:14px}
 }.template-services .entry-content .representative-experience .experience .overlay .learn-more{margin-top:15px}
 .template-services .entry-content .representative-experience .experience .overlay .learn-more a{text-transform:uppercase;color:inherit}
 .template-services .entry-content .representative-experience .experience .hidden{display:none}

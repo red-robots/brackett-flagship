@@ -6,9 +6,9 @@
  */
 
 get_header(); ?>
-    <div class="wrapper">
+    <div class="wrapper template-services">
         <div id="primary" class="site-content left-column">
-            <div id="content" role="main" class="template-services">
+            <div id="content" role="main">
 				<?php if ( have_posts() ) : the_post(); ?>
                     <div class="entry-content">
                         <?php $post = get_post(5);
@@ -43,7 +43,7 @@ get_header(); ?>
 	                                $image   = get_field( 'featured_image' );
 	                                $title   = $image['title'];
 	                                $alt     = $image['alt'];
-	                                $size    = 'property';
+	                                $size    = 'rep-e';
 	                                $url = $image['url'];
 	                                $thumb   = $image['sizes'][ $size ];?>
                                     <?php if($image): ?>

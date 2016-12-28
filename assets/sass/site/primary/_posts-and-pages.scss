@@ -897,6 +897,105 @@ ul.listings li ul.children li a {
 
 /* Services page
 -------------------------------------------------------------- */
+.template-rep-e {
+  #primary {
+    width: 100%;
+    .entry-content {
+      .representative-experience {
+        .experience {
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0 0 4% 0;
+          @media screen and (min-width: $tabwidth) {
+            width: 1/2*96%;
+            &:nth-child(odd) {
+              margin: 0 4% 4% 0;
+            }
+            &:nth-child(even) {
+              margin: 0 0 4% 0;
+            }
+          }
+          @media screen and (min-width: $midwidth) {
+            width: 1/3*96%;
+            &:nth-child(odd) {
+              margin: 0 0 2% 0;
+            }
+            &:nth-child(even) {
+              margin: 0 0 2% 0;
+            }
+            &.countmod3-0, &.countmod3-1 {
+              margin: 0 2% 2% 0;
+            }
+          }
+          @media screen and (min-width: $deskwidth) {
+            width: 1/4*94%;
+            &:nth-child(odd) {
+              margin: 0 0 2% 0;
+            }
+            &:nth-child(even) {
+              margin: 0 0 2% 0;
+            }
+            &.count-0, &.count-1, &.count-2 {
+              margin: 0 2% 2% 0;
+            }
+          }
+          img {
+            width: 100%;
+            display: block;
+          }
+          &:hover {
+            .overlay {
+              opacity: 1;
+            }
+          }
+          .overlay {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(38, 44, 119, 0.4);
+            opacity: 0;
+            font-family: Calibri;
+            font-size: 14px;
+            color: white;
+            padding: 20px;
+            overflow: hidden;
+            @media screen and (min-width: $tinywidth) {
+              font-size: 19px;
+              padding: 30px;
+            }
+            @media screen and (min-width: $deskwidth) {
+              padding: 35px 30px;
+              font-size: 16px;
+            }
+            .square-footage {
+
+            }
+            .address {
+
+            }
+            .learn-more {
+              margin-top: 15px;
+              a {
+                text-transform: uppercase;
+                color: inherit;
+              }
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Services page
+-------------------------------------------------------------- */
 .template-services {
   .entry-content {
     h2 {
@@ -922,6 +1021,9 @@ ul.listings li ul.children li a {
         @media screen and (min-width: $deskwidth) {
           width: 1/3*96%;
           &:nth-child(odd) {
+            margin: 0 0 2% 0;
+          }
+          &:nth-child(even) {
             margin: 0 0 2% 0;
           }
           &.count-0, &.count-1 {
@@ -956,7 +1058,7 @@ ul.listings li ul.children li a {
             padding: 30px;
           }
           @media screen and (min-width: $deskwidth) {
-            padding: 20px;
+            padding: 30px 20px;
             font-size: 14px;
           }
           .square-footage {
@@ -1045,7 +1147,7 @@ ul.listings li ul.children li a {
       }
     }
   }
-  #cboxPrevious{
+  #cboxPrevious {
     bottom: 10px;
     left: 20px;
     right: auto;
@@ -1070,7 +1172,7 @@ ul.listings li ul.children li a {
       bottom: 60px;
     }
   }
-  #cboxNext  {
+  #cboxNext {
     bottom: 30px;
     right: 20px;
     background: none;
@@ -1095,7 +1197,7 @@ ul.listings li ul.children li a {
       bottom: 60px;
     }
   }
-  #cboxClose{
+  #cboxClose {
     color: #85101A;
     font-size: 24px;
     text-indent: 0;

@@ -40,6 +40,7 @@ set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 add_image_size('slide', 1200, 775, array('center','center'));
 add_image_size('profile', 400, 400, array('center','center'));
 add_image_size('property', 400, 214, array('center','center'));
+add_image_size('rep-e', 400, 250, array('center','center'));
 
 /*-------------------------------------
 	Custom client login, link and title.
