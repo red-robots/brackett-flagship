@@ -75,10 +75,16 @@ header#masthead {
   }
   >.wrapper {
     width: 100%;
-    padding: 10px 20px;
+    padding: 20px 15px;
+    @media screen and (min-width: $tinywidth) {
+      padding: 20px 20px;
+    }
+    @media screen and (min-width: $tabwidth) {
+      padding: 40px 20px;
+    }
     @media screen and (min-width: $deskwidth) {
       width: 1050px;
-      padding: 10px 0;
+      padding: 40px 0;
     }
   }
 }
@@ -234,7 +240,7 @@ aside.right-column {
   height: 64px;
 	background-image: url(images/logo.png);	
 	z-index: 1;
-    margin: 0 auto 20px auto;
+    margin: 20px auto 40px auto;
 	background-size: cover;
 	@media screen and (min-width: $tabwidth) {
 		float: left;
