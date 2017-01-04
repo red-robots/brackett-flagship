@@ -885,7 +885,7 @@ body{font-family:'Crimson Text',serif}
 }@media screen and (min-width:1200px){.top-wrapper{width:1050px;padding:0}
 }header#masthead{border-bottom:2px solid #85101a}
 header#masthead:after{clear:both;display:block;content:""}
-header#masthead>.wrapper{width:100%;padding:10px 20px 20px 20px}
+header#masthead>.wrapper{width:100%;padding:10px 20px}
 @media screen and (min-width:1200px){header#masthead>.wrapper{width:1050px;padding:10px 0}
 }.red-border{width:100%;float:left;margin-top:2px;border-top:2px solid #85101a}
 #primary{width:100%;float:left;margin-top:24px}
@@ -916,11 +916,11 @@ aside.right-column .testimonial .testi-creds .the-testimonial-name .reviewer-nam
 .widget-area .widget h3{margin-bottom:24px;font-size:14px;font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:300;color:#525261}
 .widget-area .widget ul li{font-size:13px;line-height:1.846153846}
 .widget-area .widget ul li a{color:#757575}
-.logo,h1.logo{width:250px;height:94px;background-image:url(images/logo.png);z-index:1;margin:0 auto 20px auto;background-size:cover}
-@media screen and (min-width:600px){.logo,h1.logo{float:left;margin:-40px auto 0 auto}
-}.logo a,h1.logo a{width:250px;height:94px;display:block;text-indent:-9000px}
+.logo,h1.logo{width:250px;height:64px;background-image:url(images/logo.png);z-index:1;margin:0 auto 20px auto;background-size:cover}
+@media screen and (min-width:600px){.logo,h1.logo{float:left;margin:0 auto}
+}.logo a,h1.logo a{width:250px;height:64px;display:block;text-indent:-9000px}
 .header-right{width:100%;text-align:center}
-@media screen and (min-width:600px){.header-right{width:auto;float:right;text-align:center}
+@media screen and (min-width:600px){.header-right{width:auto;float:right;text-align:center;margin-top:5px}
 }.phone{width:100%;display:inline-block;float:right;color:#262c77;font-size:24px;font-family:Calibri,sans-serif;text-align:center;letter-spacing:1px;line-height:1;margin:5px 0 0 0}
 @media screen and (min-width:600px){.phone{width:auto;float:right;text-align:right;margin:10px 0 0 0}
 }footer[role="contentinfo"]{background-color:#ededed;padding:20px;clear:both;font-family:Calibri;font-size:14px;line-height:1.2;letter-spacing:1px;margin:0;color:#262c77;text-align:right}

@@ -75,7 +75,7 @@ header#masthead {
   }
   >.wrapper {
     width: 100%;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 20px;
     @media screen and (min-width: $deskwidth) {
       width: 1050px;
       padding: 10px 0;
@@ -231,14 +231,14 @@ aside.right-column {
 /* Logo */
 .logo , h1.logo {
   width: 250px;
-  height: 94px;
+  height: 64px;
 	background-image: url(images/logo.png);	
 	z-index: 1;
     margin: 0 auto 20px auto;
 	background-size: cover;
 	@media screen and (min-width: $tabwidth) {
 		float: left;
-      margin: -40px auto 0 auto;
+      margin: 0 auto ;
 	}
 	@media screen and (min-width: $deskwidth) {
 
@@ -246,7 +246,7 @@ aside.right-column {
 }
 .logo a, h1.logo a{
 	width: 250px;
-	height: 94px;
+	height: 64px;
 	display: block;
 	text-indent: -9000px;
 	@media screen and (min-width: $tabwidth) {
@@ -263,9 +263,9 @@ aside.right-column {
 		width: auto;
 		float: right;	
 		text-align: center;
+        margin-top: 5px;
 	}
 	@media screen and (min-width: $deskwidth) {
-
 	}
 }
 .phone {
