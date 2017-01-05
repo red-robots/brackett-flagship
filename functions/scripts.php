@@ -7,6 +7,9 @@
 
 		wp_deregister_script('jquery');
 
+		wp_register_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAvbVp1FfPxsPE3qzPwHQeyyHp_0VI2NWo',null,null,true);
+		wp_enqueue_script('googlemaps');
+
 		wp_register_script(
 			'jquery', 
 			'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', 

@@ -675,6 +675,12 @@ section.the-testis {
 
 .profile-name, .profile-phone, .profile-email, .profile-card {
   color: $color-blue;
+  a {
+    color: inherit;
+    &:hover {
+      color: $color-red;
+    }
+  }
 }
 
 .profile-name {
@@ -743,6 +749,12 @@ section.the-testis {
 
 .single-profile-name, .single-profile-phone, .single-profile-email, .single-profile-card {
   color: $color-blue;
+  a {
+    color: inherit;
+    &:hover {
+      color: $color-red;
+    }
+  }
 }
 
 .single-profile-name {
@@ -1357,7 +1369,7 @@ ul.availabilities li {
 
 li.property-detail {
   margin: 3px 0 !important;
-  list-style: square !important;
+  list-style: none;
 }
 
 .p-detail {
