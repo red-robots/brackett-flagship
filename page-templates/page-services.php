@@ -157,7 +157,6 @@ get_header(); ?>
                     echo $contact_text;
                 }?>
             </div><!--.contact-text-->
-            <div class="person-list">
 	            <?php
 	            $people = get_posts( array(
 		            'post_type'      => 'team',
@@ -172,8 +171,9 @@ get_header(); ?>
 			            )
 		            )
 	            ) );
-	            if ( $people ):
-		            foreach ( $people as $post ):
+	            if ( $people ):?>
+		            <div class="person-list featured">
+		            <?php foreach ( $people as $post ):
 			            setup_postdata( $post );
 
 			            $image = get_field( 'team_photo' );
@@ -217,6 +217,7 @@ get_header(); ?>
                         <div class="clear"></div>
 		            <?php endforeach; ?>
 		            <?php wp_reset_postdata(); ?>
+                    </div><!--person list featured-->
 	            <?php endif; ?>
 	            <?php
 	            $people = get_posts( array(
@@ -232,8 +233,10 @@ get_header(); ?>
 			            )
 		            )
 	            ) );
-	            if ( $people ):
-		            foreach ( $people as $post ):
+	            if ( $people ):?>
+
+            <div class="person-list">
+		            <?php foreach ( $people as $post ):
 			            setup_postdata( $post );
 
 			            $image = get_field( 'team_photo' );
@@ -265,8 +268,8 @@ get_header(); ?>
                         <div class="clear"></div>
 		            <?php endforeach; ?>
 		            <?php wp_reset_postdata(); ?>
-	            <?php endif; ?>
             </div><!--person list-->
+	            <?php endif; ?>
 			<?php
 
 			/*

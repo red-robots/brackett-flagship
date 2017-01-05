@@ -944,8 +944,9 @@ section[role="banner"]{margin-bottom:48px}
 @media screen and (min-width:600px){#primary.property-content{float:left;width:75.104166667%}
 }.service-list{width:100%;margin:24px auto}
 @media screen and (min-width:600px){.service-list{margin:90px 0 0 0}
-}.contact-text{width:100%;margin:24px auto 12px auto;font-size:15px;font-family:Cambria}
+}.contact-text{width:100%;margin:24px auto 0 auto;padding:5px 5px 12px 5px;font-size:15px;font-family:Cambria;background-color:#ededed}
 .person-list{width:100%;margin:12px auto 24px auto}
+.person-list.featured{margin:0 auto 24px auto}
 .teamlist{width:90%;margin:24px auto;padding:2%}
 @media screen and (min-width:600px){.teamlist{width:20%;float:right;margin:115px 0 0 0;padding:15px}
 }.property-list{width:100%;margin:24px auto}
@@ -992,7 +993,7 @@ section.the-testis{background-color:#262c77;width:100%;float:left}
 .the-testimonial-name{font-weight:600;font-size:22px;display:inline-block;width:auto;float:left}
 .the-testimonial-jt,.the-testimonial-company{font-weight:400;font-size:22px;display:inline-block;width:auto;float:left}
 .sideperson{width:100%;margin:5px 0 5px 0;overflow:hidden;font-family:Cambria}
-.sideperson.featured{border:2px solid #262c77;padding:10px}
+.sideperson.featured{background-color:#ededed;padding:10px;margin:0}
 .sideperson.featured .sideperson-thumb{width:34%}
 @media screen and (min-width:600px){.sideperson.featured .sideperson-thumb{width:44%}
 }@media screen and (min-width:1200px){.sideperson.featured .sideperson-thumb{width:34%}

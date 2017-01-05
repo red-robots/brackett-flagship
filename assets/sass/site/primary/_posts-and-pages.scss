@@ -63,14 +63,19 @@
 
 .contact-text {
   width: 100%;
-  margin: 24px auto 12px auto;
+  margin: 24px auto 0 auto;
+  padding: 5px 5px 12px 5px;
   font-size: 15px;
   font-family: Cambria;
+  background-color: $color-light-grey;
 }
 
 .person-list {
   width: 100%;
   margin: 12px auto 24px auto;
+  &.featured {
+    margin: 0 auto 24px auto;
+  }
 }
 
 .teamlist {
@@ -415,8 +420,9 @@ section.the-testis {
   overflow: hidden;
   font-family: Cambria;
   &.featured {
-    border: 2px solid #262C77;
+    background-color: $color-light-grey;
     padding: 10px;
+    margin: 0;
     .sideperson-thumb {
       width: 34%;
       @media screen and (min-width: $tabwidth) {
