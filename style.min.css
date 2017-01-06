@@ -635,7 +635,7 @@ embed,iframe,object,video{max-width:100%}
 article.sticky .featured-post{border-top:4px double #ededed;border-bottom:4px double #ededed;color:#757575;font-size:13px;line-height:3.692307692;margin-bottom:24px;text-align:center}
 .entry-content,.entry-summary,.mu_register{line-height:1.5;font-family:'Crimson Text',serif;color:#535062;font-size:15px}
 .entry-content h1,.comment-content h1,.entry-content h2,.comment-content h2,.entry-content h3,.comment-content h3,.entry-content h4,.comment-content h4,.entry-content h5,.comment-content h5,.entry-content h6,.comment-content h6{margin:24px 0;line-height:1.714285714}
-.entry-content h1,.comment-content h1{font-size:29px;line-height:1.5;font-family:'Oswald',sans-serif;color:#262c77;font-weight:400;text-transform:uppercase;letter-spacing:2px}
+.entry-content h1,.comment-content h1{font-size:24px;line-height:1.5;font-family:'Oswald',sans-serif;color:#262c77;font-weight:400;text-transform:uppercase;letter-spacing:2px}
 .entry-content h2,.comment-content h2,.mu_register h2{font-size:18px;line-height:1.6;font-family:'Oswald',sans-serif;font-weight:400}
 .entry-content h3,.comment-content h3{font-size:16px;line-height:1.846153846}
 .entry-content h4,.comment-content h4{font-size:14px;line-height:1.846153846}
@@ -735,15 +735,15 @@ a:hover,a:active{outline:0}
 @media screen and (min-width:600px){.main-navigation>.wrapper{padding:8px 20px}
 }@media screen and (min-width:1200px){.main-navigation>.wrapper{width:1050px;padding:8px 0}
 }.main-navigation ul{display:none;list-style:none;margin:0;padding-left:0;text-indent:0}
-@media screen and (min-width:600px){.main-navigation ul ul{float:left;position:absolute;top:1.5em;left:-999em;z-index:99999}
+@media screen and (min-width:600px){.main-navigation ul ul{float:left;position:absolute;top:1.5em;z-index:99999;display:none}
 }.main-navigation ul ul ul{left:-999em;top:0}
-@media screen and (min-width:600px){.main-navigation ul ul li{float:left}
+@media screen and (min-width:600px){.main-navigation ul ul li{float:left;margin:0}
 .main-navigation ul ul li:hover>ul,.main-navigation ul ul li.focus>ul{left:100%}
 }.main-navigation ul ul a{color:#fff}
-@media screen and (min-width:600px){.main-navigation ul ul a{width:200px;background:#85101a;border-bottom:1px dotted #fff;display:block;font-size:14px;line-height:2.181818182;padding:8px 10px;width:220px;white-space:normal;-webkit-transition:all ease .3s;transition:all ease .3s}
+@media screen and (min-width:600px){.main-navigation ul ul a{background:#85101a;border-bottom:1px dotted #fff;display:block;font-size:14px;line-height:2.181818182;padding:8px 10px;text-align:left;width:220px;white-space:normal;-webkit-transition:all ease .3s;transition:all ease .3s}
 }.main-navigation ul ul :hover>a,.main-navigation ul ul .focus>a{color:#fff}
 @media screen and (min-width:600px){.main-navigation ul ul:hover>a,.main-navigation ul ul .focus>a{background-color:#262f70}
-}.main-navigation ul li:hover>ul,.main-navigation ul li.focus>ul{left:auto}
+}.main-navigation ul li:hover>ul,.main-navigation ul li.focus>ul{display:block}
 .main-navigation li{display:block;position:relative;font-family:Calibri,sans-serif;padding:12px 0;font-size:18px}
 @media screen and (min-width:600px){.main-navigation li{border-bottom:0;display:inline-block;text-transform:capitalize;white-space:nowrap;margin:0 30px;padding:0;position:relative;font-size:20px}
 }.main-navigation a{display:block;text-decoration:none;color:#fff}
@@ -907,7 +907,7 @@ aside.right-column .testimonial .testi-creds .the-testimonial-name .reviewer-nam
 .site{padding:0;background-color:#fff}
 @media screen and (min-width:600px){.site{margin:0 auto;overflow:hidden;padding:0}
 }#primary.site-content{margin:24px 0 0}
-@media screen and (min-width:600px){#primary.site-content{float:left;width:65.104166667%;margin:0}
+@media screen and (min-width:600px){#primary.site-content{float:left;width:65.104166667%}
 }.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
@@ -944,7 +944,7 @@ section[role="banner"]{margin-bottom:48px}
 @media screen and (min-width:600px){#primary.property-content{float:left;width:75.104166667%}
 }.service-list{width:100%;margin:24px auto}
 @media screen and (min-width:600px){.service-list{margin:90px 0 0 0}
-}.contact-text{width:100%;margin:24px auto 0 auto;padding:5px 5px 12px 5px;font-size:15px;font-family:Cambria;background-color:#ededed}
+}.contact-text{width:100%;margin:24px auto 0 auto;padding:5px 5px 12px 5px;font-size:15px;font-family:Cambria;background-color:#ededed;color:#85101a}
 .person-list{width:100%;margin:12px auto 24px auto}
 .person-list.featured{margin:0 auto 24px auto}
 .teamlist{width:90%;margin:24px auto;padding:2%}

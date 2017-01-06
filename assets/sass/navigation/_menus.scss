@@ -35,8 +35,8 @@
               float: left;
               position: absolute;
               top: 1.5em;
-              left: -999em;
               z-index: 99999;
+              display: none;
             }
 
 			ul {
@@ -47,6 +47,7 @@
 			li {
               @media screen and (min-width: $tabwidth) {
                 float: left;
+                margin: 0;
                 &:hover > ul,
                 &.focus > ul {
                   left: 100%;
@@ -57,13 +58,13 @@
 			a {
               color: #fff;
               @media screen and (min-width: $tabwidth) {
-                width: 200px;
                 background: #85101A;
                 border-bottom: 1px dotted #fff;
                 display: block;
                 font-size: 14px;
                 line-height: 2.181818182;
                 padding: 8px 10px;
+                text-align: left;
                 width: 220px;
                 white-space: normal;
                 @include transition(all ease .3s);
@@ -85,7 +86,7 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			display: block;
 		}
 	}
 	li {

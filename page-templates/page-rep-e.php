@@ -7,7 +7,7 @@
 
 get_header(); ?>
     <div class="wrapper template-rep-e">
-        <div id="primary" class="site-content left-column">
+        <div id="primary" class="site-content">
             <div id="content" role="main">
 				<?php if ( have_posts() ) : the_post(); ?>
                     <div class="entry-content">
