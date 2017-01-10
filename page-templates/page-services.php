@@ -19,9 +19,6 @@ get_header(); ?>
                         wp_reset_postdata();?>
                         <h1><?php the_title(); ?></h1>
 						<?php the_content(); ?>
-                        <?php if($rep_e_header):?>
-                            <h2><?php echo $rep_e_header;?></h2>
-                        <?php endif; ?>
                         <?php $args = array(
 	                        'post_type'      => 'profile',
 	                        'posts_per_page' => -1,
@@ -36,6 +33,9 @@ get_header(); ?>
                         );
                         $query = new WP_Query($args);
                         if($query->have_posts()):?>
+	                        <?php if($rep_e_header):?>
+                                <h2><?php echo $rep_e_header;?></h2>
+	                        <?php endif; ?>
                             <div class="representative-experience clear-bottom">
                                 <?php $count = 0;
                                 while($query->have_posts()):
@@ -197,9 +197,7 @@ get_header(); ?>
                                         <?php the_title(); ?>
                                     </div><!--sideperson-->
                                     <?php if($job_title): ?>
-                                        <div class="sideperson-job-title">
-                                            <?php echo $job_title; ?>
-                                        </div><!--.sideperson-job-title-->
+                                        <div class="sideperson-job-title"><?php echo $job_title; ?></div><!--.sideperson-job-title-->
                                     <?php endif; ?>
                                     <?php if($direct_phone): ?>
                                         <div class="sideperson-direct-phone">
@@ -258,9 +256,7 @@ get_header(); ?>
                                         <?php the_title(); ?>
                                     </div><!--sideperson-->
                                     <?php if($job_title): ?>
-                                        <div class="sideperson-job-title">
-                                            <?php echo $job_title; ?>
-                                        </div><!--.sideperson-job-title-->
+                                        <div class="sideperson-job-title"><?php echo $job_title; ?></div><!--.sideperson-job-title-->
                                     <?php endif; ?>
                                 </div><!--.info-->
                             </a>
