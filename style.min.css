@@ -1000,7 +1000,7 @@ section.the-testis{background-color:#262c77;width:100%;float:left}
 }.sideperson.featured .info{width:66%}
 @media screen and (min-width:600px){.sideperson.featured .info{width:56%}
 }@media screen and (min-width:1200px){.sideperson.featured .info{width:66%}
-}.sideperson a{color:#52525f;display:block;line-height:0}
+}.sideperson a{color:#52525f;display:block}
 .sideperson a:hover{color:#85101a}
 .sideperson-thumb{width:30%;float:left;padding:0 20px 0 0}
 @media screen and (min-width:600px){.sideperson-thumb{width:40%}
