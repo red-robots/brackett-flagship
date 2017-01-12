@@ -38,10 +38,13 @@
 			);
 		wp_enqueue_script('custom');
 		
-		
-		
-	
-		
 	}
 }
 add_action('wp_enqueue_scripts', 'ineedmyjava');
+
+function bella_acf_init() {
+
+	acf_update_setting('google_api_key', 'AIzaSyAvbVp1FfPxsPE3qzPwHQeyyHp_0VI2NWo');
+}
+
+add_action('acf/init', 'bella_acf_init');

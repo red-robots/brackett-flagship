@@ -1009,9 +1009,9 @@ section.the-testis{background-color:#262c77;width:100%;float:left}
 .sideperson .info{width:70%;float:left}
 @media screen and (min-width:600px){.sideperson .info{width:60%}
 }@media screen and (min-width:1200px){.sideperson .info{width:70%}
-}.info .sideperson-title{font-size:16px;margin:0 0 5px 0;line-height:1.2;padding:0 0 2px 0;border-bottom:1px dashed #85101a}
+}.info .sideperson-title{font-size:16px;margin:0 0 5px 0;line-height:inherit;padding:0 0 2px 0;border-bottom:1px dashed #85101a}
 @media screen and (min-width:1200px){.info .sideperson-title{height:auto;font-size:14px}
-}.info .sideperson-job-title,.info .sideperson-direct-phone,.info .sideperson-email{line-height:1.2;font-size:16px}
+}.info .sideperson-job-title,.info .sideperson-direct-phone,.info .sideperson-email{line-height:inherit;font-size:16px}
 @media screen and (min-width:1200px){.info .sideperson-job-title,.info .sideperson-direct-phone,.info .sideperson-email{font-size:14px}
 }.sideperson-email{word-break:break-all}
 .toggle{padding:10px 0;text-align:center}
