@@ -67,7 +67,6 @@
   padding: 5px 5px 12px 5px;
   font-size: 15px;
   font-family: 'Source Serif Pro', serif;
-  background-color: $color-light-grey;
   color: $color-red;
 }
 
@@ -82,11 +81,12 @@
 .teamlist {
   width: 90%;
   margin: 24px auto;
+  float: left;
   padding: 2%;
   @media screen and (min-width: $tabwidth) {
     width: 20%;
     float: right;
-    margin: 115px 0 0 0;
+    margin: 115px 0 24px 0;
     padding: 15px;
   }
   @media screen and (min-width: $deskwidth) {
@@ -227,7 +227,7 @@
     font-size: 29px;
     font-family: 'Source Serif Pro', serif;
     padding: 20px 20px 5px 20px;
-    border-bottom: 1px dotted #9B0900;
+    border-bottom: 1px solid #9B0900;
     font-weight: 500;
     margin: 0;
   }
@@ -289,7 +289,7 @@
   font-size: 29px;
   font-family: 'Source Serif Pro', serif;
   font-weight: 500;
-  border-bottom: 1px dotted $color-dark-red;
+  border-bottom: 1px solid $color-dark-red;
   padding: 20px 10px 5px 10px;
   margin: 0;
   color: #241F45;
@@ -760,8 +760,6 @@ section.the-testis {
 .single-profile-name {
   font-size: 18px;
   font-weight: 600;
-  margin: 0 0 10px 0;
-  border-bottom: dotted #9B0A00 1px;
 }
 
 .single-profile-details {
@@ -774,12 +772,10 @@ section.the-testis {
 
 .single-profile-phone {
   font-size: 16px;
-  margin: 0 0 0px 0;
 }
 
 .single-profile-email {
   font-size: 16px;
-  margin: 10px 0 10px 0;
 }
 
 .single-profile-card {
@@ -799,12 +795,10 @@ section.the-testis {
 .single-profile-extras h3 {
   font-size: 18px !important;
   text-transform: uppercase !important;
-  margin: 0 0 15px 0 !important;
+  margin: 0 !important;
   font-family: 'Source Serif Pro', serif !important;
   font-weight: 300 !important;
-  border-top: 1px dotted #9B0800;
-  border-bottom: 1px dotted #9B0800;
-  padding: 6px 0;
+  padding: 6px 0 0 0;
 }
 
 ul.ourteam-list li {
@@ -984,27 +978,33 @@ ul.listings li ul.children li a {
             font-family: Calibri;
             font-size: 14px;
             color: white;
-            padding: 20px;
             overflow: hidden;
             @media screen and (min-width: $tinywidth) {
               font-size: 19px;
-              padding: 30px;
             }
             @media screen and (min-width: $deskwidth) {
-              padding: 35px 30px;
               font-size: 16px;
             }
-            .square-footage {
+            a {
+              padding: 20px;
+              text-transform: uppercase;
+              color: inherit;
+              text-decoration: none;
+              display: block;
+              @media screen and (min-width: $tinywidth) {
+                padding: 30px;
+              }
+              @media screen and (min-width: $deskwidth) {
+                padding: 35px 30px;
+              }
+              .square-footage {
 
-            }
-            .address {
+              }
+              .address {
 
-            }
-            .learn-more {
-              margin-top: 15px;
-              a {
-                text-transform: uppercase;
-                color: inherit;
+              }
+              .learn-more {
+                margin-top: 15px;
               }
             }
           }
@@ -1074,27 +1074,35 @@ ul.listings li ul.children li a {
           font-family: Calibri;
           font-size: 14px;
           color: white;
-          padding: 20px;
           overflow: hidden;
           @media screen and (min-width: $tinywidth) {
             font-size: 19px;
-            padding: 30px;
           }
           @media screen and (min-width: $deskwidth) {
-            padding: 30px 20px;
             font-size: 14px;
           }
-          .square-footage {
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: inherit;
+            @media screen and (min-width: $tinywidth) {
+              padding: 30px;
+            }
+            @media screen and (min-width: $deskwidth) {
+              padding: 30px 20px;
+            }
+            .square-footage {
 
-          }
-          .address {
+            }
+            .address {
 
-          }
-          .learn-more {
-            margin-top: 15px;
-            a {
-              text-transform: uppercase;
-              color: inherit;
+            }
+            .learn-more {
+              margin-top: 15px;
             }
           }
         }

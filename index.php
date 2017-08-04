@@ -77,7 +77,7 @@ if ( $the_query->have_posts() ) : ?>
 							<a href="<?php the_permalink(); ?>">
 								<div class="date"><?php echo get_the_date( 'm.d.y' ); ?></div>
 
-								<?php echo get_excerpt( 15 ); ?>
+								<?php the_excerpt(  ); ?>
 							</a>
 						</div><!-- news item -->
 					<?php endwhile;?>

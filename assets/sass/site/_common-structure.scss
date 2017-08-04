@@ -235,13 +235,13 @@ aside.right-column {
 }
 /* Logo */
 .logo , h1.logo {
-  width: 250px;
-  height: 64px;
-	background-image: url(images/logo.png);	
+  width: 200px;
+  height: 52px;
 	z-index: 1;
-    margin: 20px auto 40px auto;
-	background-size: cover;
+  margin: 20px auto 40px auto;
 	@media screen and (min-width: $tabwidth) {
+  width: 250px;
+  height: 65px;
 		float: left;
       margin: 0 auto ;
 	}
@@ -250,16 +250,22 @@ aside.right-column {
 	}
 }
 .logo a, h1.logo a{
-	width: 250px;
-	height: 64px;
+	width: 200px;
+	height: 52px;
 	display: block;
 	text-indent: -9000px;
 	@media screen and (min-width: $tabwidth) {
+    width: 250px;
+    height: 65px;
 
 	}
 	@media screen and (min-width: $deskwidth) {
 
 	}
+}
+.logo a img {
+  width: 100%;
+  display: block;
 }
 .header-right {
 	width: 100%;

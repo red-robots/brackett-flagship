@@ -38,25 +38,25 @@ get_header(); ?>
                                         <div class="experience js-blocks count-<?php echo $count%4;?> countmod3-<?php echo $count%3;?>">
                                             <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" title="<?php echo $title; ?>"/>
                                             <div class="overlay">
-                                                <?php $square_footage = get_field("square_footage");
-                                                $address = get_field("address");
-                                                if($square_footage):?>
-                                                    <div class="square-footage">
-                                                        <?php echo $square_footage;?>
-                                                    </div><!--.square-footage-->
-                                                <?php endif;?>
-                                                <?php if($address):?>
-                                                    <div class="address">
-                                                        <?php echo $address;?>
-                                                    </div><!--.address-->
-                                                <?php endif;?>
-                                                <?php if($learn_more_text):?>
-                                                    <div class="learn-more">
-                                                        <a class="popup-link" href="<?php echo '#'.$post->post_name;?>">
-                                                            <?php echo $learn_more_text;?>
-                                                        </a>
-                                                    </div><!--.learn-more-->
-                                                <?php endif;?>
+                                                <a class="popup-link" href="<?php echo '#'.$post->post_name;?>">
+                                                    <?php $square_footage = get_field("square_footage");
+                                                    $address = get_field("address");
+                                                    if($square_footage):?>
+                                                        <div class="square-footage">
+                                                            <?php echo $square_footage;?>
+                                                        </div><!--.square-footage-->
+                                                    <?php endif;?>
+                                                    <?php if($address):?>
+                                                        <div class="address">
+                                                            <?php echo $address;?>
+                                                        </div><!--.address-->
+                                                    <?php endif;?>
+                                                    <?php if($learn_more_text):?>
+                                                        <div class="learn-more">
+                                                                <?php echo $learn_more_text;?>
+                                                        </div><!--.learn-more-->
+                                                    <?php endif;?>
+                                                </a>
                                             </div><!--.overlay-->
                                             <div class="hidden">
                                                 <div id="<?php echo $post->post_name?>" class="rep-e-popup">

@@ -12,26 +12,26 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); 
 			
-	$image = get_field('team_photo');
-	$url = $image['url'];
-	$title = $image['title'];
-	$alt = $image['alt'];
-	$caption = $image['caption'];
-	$size = 'large';
-	$thumb = $image['sizes'][ $size ];
-	$width = $image['sizes'][ $size . '-width' ];
-	$height = $image['sizes'][ $size . '-height' ];
-	$jobTitle = get_field('job_title');
-	$dPhone = get_field('direct_phone');
-	$mPhone = get_field('mobile_phone');
-	$oPhone = get_field('office_phone');
-	$email = get_field('email');
-	$obfsc = antispambot($email);
-	$vcard = get_field('vcard');
-	$experience = get_field('professional_experience');
-	$affiliations = get_field('affiliations_accreditations_and_interests');
-	$education = get_field('education');
-	$fact = get_field('funfact');
+            $image = get_field('team_photo');
+            $url = $image['url'];
+            $title = $image['title'];
+            $alt = $image['alt'];
+            $caption = $image['caption'];
+            $size = 'large';
+            $thumb = $image['sizes'][ $size ];
+            $width = $image['sizes'][ $size . '-width' ];
+            $height = $image['sizes'][ $size . '-height' ];
+            $jobTitle = get_field('job_title');
+            $dPhone = get_field('direct_phone');
+            $mPhone = get_field('mobile_phone');
+            $oPhone = get_field('office_phone');
+            $email = get_field('email');
+            $obfsc = antispambot($email);
+            $vcard = get_field('vcard');
+            $experience = get_field('professional_experience');
+            $affiliations = get_field('affiliations_accreditations_and_interests');
+            $education = get_field('education');
+            $fact = get_field('funfact');
 			
 			?>
 
