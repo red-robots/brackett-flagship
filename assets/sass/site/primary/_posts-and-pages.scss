@@ -1131,6 +1131,7 @@ ul.listings li ul.children li a {
         padding: 80px;
       }
       .title {
+        margin: 0 0 24px 0;
         h2 {
           margin: 0;
           font-family: 'Source Serif Pro', serif;
@@ -1143,7 +1144,8 @@ ul.listings li ul.children li a {
         color: #262c77;
         font-family: 'Source Serif Pro', serif;
         font-size: 17px;
-        margin: 5px 0 24px 0;
+        margin: 0 0 24px 0;
+        text-align: right;
       }
       .featured-image {
         width: 100%;

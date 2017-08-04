@@ -786,7 +786,7 @@ a:hover,a:active{outline:0}
 #cboxMiddleLeft,#cboxBottomLeft{clear:left}
 #cboxContent{position:relative}
 #cboxLoadedContent{overflow:auto;-webkit-overflow-scrolling:touch}
-#cboxTitle{margin:0}
+#cboxTitle{margin:0;display:none !important}
 #cboxLoadingOverlay,#cboxLoadingGraphic{position:absolute;top:0;left:0;width:100%;height:100%}
 #cboxPrevious,#cboxNext,#cboxClose,#cboxSlideshow{cursor:pointer}
 .cboxPhoto{float:left;margin:auto;border:0;display:block;max-width:none;-ms-interpolation-mode:bicubic;width:80%;height:80%}
@@ -799,7 +799,7 @@ a:hover,a:active{outline:0}
 #cboxError{padding:50px;border:1px solid #ccc}
 #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center}
 #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center}
-#cboxTitle{position:absolute;bottom:-25px;left:0;text-align:left;width:60%;font-weight:bold;color:#fff;padding:4% 20% 8% 20%;line-height:1.3;font-size:20px}
+#cboxTitle{display:none !important;position:absolute;bottom:-25px;left:0;text-align:left;width:60%;font-weight:bold;color:#fff;padding:4% 20% 8% 20%;line-height:1.3;font-size:20px}
 #cboxCurrent{position:absolute;bottom:-25px;left:58px;font-weight:bold;color:#7c7c7c}
 #cboxPrevious,#cboxNext,#cboxSlideshow,#cboxClose{border:0;padding:0;margin:0;overflow:visible;position:absolute;top:10px;background:url(images/controls-new.png);background-size:150px 100px;background-repeat:no-repeat;width:50px;height:50px;text-indent:-9999px;box-shadow:none}
 #cboxPrevious:active,#cboxNext:active,#cboxSlideshow:active,#cboxClose:active{outline:0}
@@ -813,7 +813,7 @@ a:hover,a:active{outline:0}
 .cboxSlideshow_on #cboxSlideshow:hover{background-position:-150px 0}
 .cboxSlideshow_off #cboxSlideshow{background-position:-150px -25px;right:27px}
 .cboxSlideshow_off #cboxSlideshow:hover{background-position:-125px 0}
-@media screen and (min-width:600px){#cboxTitle{position:absolute;top:0;left:0;text-align:left;width:20%;font-weight:bold;color:#fff;padding:8% 2% 8% 2%;line-height:1.3;font-size:20px}
+@media screen and (min-width:600px){#cboxTitle{display:none !important;position:absolute;top:0;left:0;text-align:left;width:20%;font-weight:bold;color:#fff;padding:8% 2% 8% 2%;line-height:1.3;font-size:20px}
 }@font-face{font-family:'flexslider-icon';src:url("../fonts/webfont/flexslider-icon.eot");src:url("../fonts/webfonts/flexslider-icon.eot?#iefix") format("embedded-opentype"),url("../fonts/webfonts/flexslider-icon.woff") format("woff"),url("../fonts/webfonts/flexslider-icon.ttf") format("truetype"),url("../fonts/webfonts/flexslider-icon.svg#flexslider-icon") format("svg");font-weight:normal;font-style:normal}
 .flex-container a:hover,.flex-slider a:hover,.flex-container a:focus,.flex-slider a:focus{outline:0}
 .slides,.slides>li,.flex-control-nav,.flex-direction-nav{margin:0;padding:0;list-style:none}
@@ -1133,8 +1133,9 @@ ul.listings li ul.children li a{color:#535362}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup{box-sizing:border-box;width:100%;height:100%;background-color:white;padding:40px 20px 60px 20px}
 @media screen and (min-width:600px){.rep-e-colorbox #cboxLoadedContent .rep-e-popup{padding:60px}
 }@media screen and (min-width:1200px){.rep-e-colorbox #cboxLoadedContent .rep-e-popup{padding:80px}
-}.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title h2{margin:0;font-family:'Source Serif Pro',serif;font-size:24px;color:#85101a;border-bottom:2px dotted #262c77}
-.rep-e-colorbox #cboxLoadedContent .rep-e-popup .address{color:#262c77;font-family:'Source Serif Pro',serif;font-size:17px;margin:5px 0 24px 0}
+}.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title{margin:0 0 24px 0}
+.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title h2{margin:0;font-family:'Source Serif Pro',serif;font-size:24px;color:#85101a;border-bottom:2px dotted #262c77}
+.rep-e-colorbox #cboxLoadedContent .rep-e-popup .address{color:#262c77;font-family:'Source Serif Pro',serif;font-size:17px;margin:0 0 24px 0;text-align:right}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup .featured-image{width:100%}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup .featured-image img{width:100%;display:block}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup .description{margin:24px 0 0 0;font-size:16px;padding-bottom:24px;border-bottom:2px dotted #262c77}
