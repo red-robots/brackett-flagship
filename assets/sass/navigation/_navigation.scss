@@ -55,15 +55,57 @@
     }
   }
 }
+.bottom-nav {
+	width: auto;
+	display: block;
+	margin: 0px auto 20px auto;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		margin: 0;
+	}
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      width: auto;
+      display: block;
+      font-size: 14px;
+      font-family:  Calibri, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      margin: 10px 0;
+      @media screen and (min-width: $tabwidth) {
+        border-right: 1px solid #535362;
+        float: left;
+        margin: 0;
+      }
+      a {
+        padding: 0 20px;
+        color: #535362;
+        text-decoration: none;
+      }
+    }
+    & li.first {
+      a {
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 20px 0 0;
+        }
+      }
+    }
+    & li.last {
+      border-right: none;
+      a {
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+  }
+}
 
 .tenant-login {
-	width: 60%;
-	position: absolute;
-	top: 25px;
-	left: 0;
-	display: none;
 	background-color: #EDEDED;
 	padding: 30px;
-	z-index: 10000;
 }
 

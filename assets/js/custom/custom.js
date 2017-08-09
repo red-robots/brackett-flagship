@@ -69,14 +69,14 @@ jQuery(document).ready(function ($) {
 /*
 		Tenant Form
 __________________________________________
-*/
+
 $('.top-nav li.tenants a').click(function() {
  
     $('.tenant-login').slideToggle(300);
     //$(this).toggleClass('close');
  
 });
-
+*/
 /*
 		FAQ dropdowns
 __________________________________________

@@ -40,17 +40,6 @@
     <div class="top-wrapper clear-bottom">
         <div class="top-nav">
             <?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>
-            
-            <div class="tenant-login">
-            	<form id="loginForm" accept-charset="UTF-8" action="http://brackettflagship.buildingengines.com/geofire/servlet/login" method="post"><input id="bldgconnect" name="bldgconnect" type="hidden" value="true" /><input class="required modern" maxlength="60" name="j_username" type="text" placeholder="Username" data-error="Username is required." />
-
-            <input class="required modern" maxlength="60" name="j_password" type="password" placeholder="Password" data-error="Password is required." />
-            <input name="info_checkbox" type="hidden" value="1" />
-            <a class="txttheme" href="http://brackettflagship.buildingengines.com/geofire/BDPW?tsp=FPW">Forgot Password?</a>
-            <button class="secondarybg txttheme modern ui-login" type="submit">Login</button>
-            </form>
-            </div><!-- tenant login -->
-            
         </div><!-- top nav -->
     </div><!-- wrapper -->
 </div><!-- top -->
