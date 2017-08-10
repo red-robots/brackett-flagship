@@ -1056,7 +1056,7 @@ section.the-testis{background-color:#262c77;width:100%;float:left}
 }@media screen and (min-width:600px){.property-profile-wrapper{width:45%;float:left;padding:2px}
 }.profile{width:auto;padding:20px 20px 50px 20px;background-color:#fff;position:relative;overflow:hidden}
 .overflow{overflow:hidden}
-.profile-title{font-size:15px;color:#241f45;border-bottom:dotted #9b0a00 1px;padding:5px 0;margin:0 0 5px 0}
+.profile-title{font-size:15px;color:#241f45;font-family:'Source Serif Pro',serif;border-bottom:dotted #9b0a00 1px;padding:5px 0;margin:0 0 5px 0}
 .profile-title,.profile-image,.profile-image img,.profile-name,.profile-phone,.profile-email{width:100%}
 .profile-name,.profile-phone,.profile-email,.profile-card{color:#262c77}
 .profile-name a,.profile-phone a,.profile-email a,.profile-card a{color:inherit}

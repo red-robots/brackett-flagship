@@ -15,13 +15,29 @@ get_header(); ?>
                 <h1><?php the_title(); ?></h1>
                 
                 <div class="contact-left">
-                	 <?php the_content(); ?>
-                 </div><!-- contact left -->
-                 
-                 <div class="contact-right">
-                 	<?php the_field('map'); ?>
-                 </div>
-                            
+					<?php the_field("content_1");?>
+				</div><!-- contact left -->
+				
+				<div class="contact-right">
+					<?php the_field('map'); ?>
+				</div>
+                <div class="clear"></div>        
+                <div class="contact-left">
+					<?php the_field("content_2");?>
+				</div><!-- contact left -->
+				
+				<div class="contact-right">
+					<?php the_field('map_2'); ?>
+				</div>
+                <div class="clear"></div>        
+                <div class="contact-left">
+					<?php the_field("content_3");?>
+				</div><!-- contact left -->
+				
+				<div class="contact-right">
+					<?php the_field('map_3'); ?>
+				</div>
+                <div class="clear"></div>            
                 </div><!-- entry content -->
                 
                 
