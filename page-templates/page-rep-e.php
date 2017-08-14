@@ -61,17 +61,18 @@ get_header(); ?>
                                             <div class="hidden">
                                                 <div id="<?php echo $post->post_name?>" class="rep-e-popup">
                                                     <?php $description = get_field("description");?>
-                                                    <div class="title">
-                                                        <h2><?php echo get_the_title();?></h2>
-                                                    </div><!--.title-->
                                                     <div class="featured-image">
                                                         <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>" title="<?php echo $title; ?>"/>
                                                     </div><!--.featured-image-->
-                                                    <?php if($address):?>
-                                                        <div class="address">
-                                                            <?php echo $address;?>
-                                                        </div><!--.address-->
-                                                    <?php endif;?>
+                                                    <div class="title">
+                                                        <h2><?php echo get_the_title();?></h2>
+                                                        <?php if($address):?>
+                                                            <span class="address">
+                                                                <?php echo $address;?>
+                                                            </span>
+                                                        <?php endif;?>
+                                                        <div class="clear"></div>
+                                                    </div><!--.title-->
                                                     <?php if($description):?>
                                                         <div class="description copy">
                                                             <?php echo $description;?>

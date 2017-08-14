@@ -69,6 +69,17 @@
   font-family: 'Source Serif Pro', serif;
   color: $color-red;
 }
+.news-text {
+  margin-top: 24px;
+  padding: 5px 5px 12px 5px;
+  font-size: 15px;
+  font-family: 'Source Serif Pro', serif;
+  color: $color-red;
+  float: left;
+  @media screen and (min-width: $tabwidth){
+    margin: 0;
+  }
+}
 
 .person-list {
   width: 100%;
@@ -118,7 +129,20 @@
   background-color: #EDEDED;
   border: 1px solid #CECCD0;
 }
-
+.news-contact-form {
+  padding: 5px;
+  background-color: #EDEDED;
+  border: 1px solid #CECCD0;
+  margin-bottom: 24px;
+  float: left;
+}
+.news-contact-form input[type=submit]{
+  box-shadow: none;
+  border: 1px solid white;
+  background-color: $color-red;
+  color: white;
+  text-shadow: none;
+}
 .teamlist h3, .property-list-content h3 {
   margin-bottom: 24px;
   font-size: 14px;
@@ -1133,20 +1157,23 @@ ul.listings li ul.children li a {
       }
       .title {
         margin: 0 0 24px 0;
+        text-align: center;
+        @media screen and (min-width: $tabwidth) {
+          text-align: right;
+        }
         h2 {
+          display: inline;
           margin: 0;
           font-family: 'Source Serif Pro', serif;
-          font-size: 24px;
-          color: #85101A;
-          border-bottom: 2px dotted #262c77;
+          font-size: 17px;
+          color: #262C77;
         }
-      }
-      .address {
-        color: #262c77;
-        font-family: 'Source Serif Pro', serif;
-        font-size: 17px;
-        margin: 0 0 24px 0;
-        text-align: right;
+        .address {
+          color: #9B0900;
+          font-family: 'Source Serif Pro', serif;
+          font-size: 17px;
+          text-align: right;
+        }
       }
       .featured-image {
         width: 100%;

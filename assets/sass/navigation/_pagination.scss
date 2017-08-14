@@ -26,10 +26,8 @@
 }
  
 .navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
 .navigation li.disabled {
-	background-color: #FAD827;
+	background-color: #9B0900;
 	border-radius: 3px;
 	cursor: pointer;
 	padding: 12px;
@@ -39,5 +37,5 @@
  
 .navigation li a:hover,
 .navigation li.active a {
-	background-color: #F47A21;
+	background-color: #262C77;
 }

@@ -779,8 +779,8 @@ a:hover,a:active{outline:0}
 .navigation ul{margin:0;padding:0}
 .navigation li{margin:0;display:inline;list-style:none}
 .navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled{color:#fff;text-decoration:none}
-.navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled{background-color:#fad827;border-radius:3px;cursor:pointer;padding:12px;padding:.75rem;-webkit-transition:.3s ease all;transition:.3s ease all}
-.navigation li a:hover,.navigation li.active a{background-color:#f47a21}
+.navigation li a,.navigation li.disabled{background-color:#9b0900;border-radius:3px;cursor:pointer;padding:12px;padding:.75rem;-webkit-transition:.3s ease all;transition:.3s ease all}
+.navigation li a:hover,.navigation li.active a{background-color:#262c77}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
@@ -960,7 +960,9 @@ section[role="banner"]{margin-bottom:48px}
 }.service-list{width:100%;margin:24px auto}
 @media screen and (min-width:600px){.service-list{margin:90px 0 0 0}
 }.contact-text{width:100%;margin:24px auto 0 auto;padding:5px 5px 12px 5px;font-size:15px;font-family:'Source Serif Pro',serif;color:#85101a}
-.person-list{width:100%;margin:12px auto 24px auto}
+.news-text{margin-top:24px;padding:5px 5px 12px 5px;font-size:15px;font-family:'Source Serif Pro',serif;color:#85101a;float:left}
+@media screen and (min-width:600px){.news-text{margin:0}
+}.person-list{width:100%;margin:12px auto 24px auto}
 .person-list.featured{margin:0 auto 24px auto}
 .teamlist{width:90%;margin:24px auto;float:left;padding:2%}
 @media screen and (min-width:600px){.teamlist{width:20%;float:right;margin:115px 0 24px 0;padding:15px}
@@ -969,6 +971,8 @@ section[role="banner"]{margin-bottom:48px}
 }.property-list-content{padding:2%}
 @media screen and (min-width:600px){.property-list-content{padding:15px}
 }.teamlist,.property-list-content{background-color:#ededed;border:1px solid #ceccd0}
+.news-contact-form{padding:5px;background-color:#ededed;border:1px solid #ceccd0;margin-bottom:24px;float:left}
+.news-contact-form input[type=submit]{box-shadow:none;border:1px solid white;background-color:#85101a;color:white;text-shadow:none}
 .teamlist h3,.property-list-content h3{margin-bottom:24px;font-size:14px;font-family:'Source Serif Pro',serif;text-transform:uppercase;font-weight:300;color:#525261}
 #home-slider{width:100%;margin:0;position:relative}
 .wrapper-absolute{width:1050px;position:absolute;margin:0 auto;top:115px;left:0;right:0;z-index:10000}
@@ -1146,9 +1150,10 @@ ul.listings li ul.children li a{color:#535362}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup{box-sizing:border-box;width:100%;height:100%;background-color:white;padding:40px 20px 60px 20px}
 @media screen and (min-width:600px){.rep-e-colorbox #cboxLoadedContent .rep-e-popup{padding:60px}
 }@media screen and (min-width:1200px){.rep-e-colorbox #cboxLoadedContent .rep-e-popup{padding:80px}
-}.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title{margin:0 0 24px 0}
-.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title h2{margin:0;font-family:'Source Serif Pro',serif;font-size:24px;color:#85101a;border-bottom:2px dotted #262c77}
-.rep-e-colorbox #cboxLoadedContent .rep-e-popup .address{color:#262c77;font-family:'Source Serif Pro',serif;font-size:17px;margin:0 0 24px 0;text-align:right}
+}.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title{margin:0 0 24px 0;text-align:center}
+@media screen and (min-width:600px){.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title{text-align:right}
+}.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title h2{display:inline;margin:0;font-family:'Source Serif Pro',serif;font-size:17px;color:#262c77}
+.rep-e-colorbox #cboxLoadedContent .rep-e-popup .title .address{color:#9b0900;font-family:'Source Serif Pro',serif;font-size:17px;text-align:right}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup .featured-image{width:100%}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup .featured-image img{width:100%;display:block}
 .rep-e-colorbox #cboxLoadedContent .rep-e-popup .description{margin:24px 0 0 0;font-size:16px;padding-bottom:24px;border-bottom:2px dotted #262c77}
