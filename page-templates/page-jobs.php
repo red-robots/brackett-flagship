@@ -30,6 +30,7 @@ get_header(); ?>
 									<div class="question">
 										<div class="question-image"></div><!--question-image-->
 										<?php the_title(); ?>
+										<?php echo do_shortcode('[addtoany]');?>
 									</div><!--question-->
 									<div class="answer"><?php the_content(); ?></div><!--answer-->
 								</div><!-- faqrow -->

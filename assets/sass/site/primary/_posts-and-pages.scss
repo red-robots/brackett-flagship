@@ -1538,6 +1538,11 @@ li.property-detail {
 
 }
 
+.question .addtoany_shortcode {
+  @media screen and (min-width: $midwidth){ 
+    display: inline; 
+  }
+}
 .question-image {
   width: 17px;
   height: 17px;
