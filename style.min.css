@@ -128,7 +128,7 @@ to{-webkit-transform:none;transform:none}
 44.4%{-webkit-transform:skewX(-3.125deg) skewY(-3.125deg);transform:skewX(-3.125deg) skewY(-3.125deg)}
 55.5%{-webkit-transform:skewX(1.5625deg) skewY(1.5625deg);transform:skewX(1.5625deg) skewY(1.5625deg)}
 66.6%{-webkit-transform:skewX(-0.78125deg) skewY(-0.78125deg);transform:skewX(-0.78125deg) skewY(-0.78125deg)}
-77.7%{-webkit-transform:skewX(0.39063deg) skewY(0.39063deg);transform:skewX(0.39063deg) skewY(0.39063deg)}
+77.7%{-webkit-transform:skewX(0.39062deg) skewY(0.39062deg);transform:skewX(0.39062deg) skewY(0.39062deg)}
 88.8%{-webkit-transform:skewX(-0.19531deg) skewY(-0.19531deg);transform:skewX(-0.19531deg) skewY(-0.19531deg)}
 }@keyframes jello{from,11.1%,to{-webkit-transform:none;transform:none}
 22.2%{-webkit-transform:skewX(-12.5deg) skewY(-12.5deg);transform:skewX(-12.5deg) skewY(-12.5deg)}
@@ -136,7 +136,7 @@ to{-webkit-transform:none;transform:none}
 44.4%{-webkit-transform:skewX(-3.125deg) skewY(-3.125deg);transform:skewX(-3.125deg) skewY(-3.125deg)}
 55.5%{-webkit-transform:skewX(1.5625deg) skewY(1.5625deg);transform:skewX(1.5625deg) skewY(1.5625deg)}
 66.6%{-webkit-transform:skewX(-0.78125deg) skewY(-0.78125deg);transform:skewX(-0.78125deg) skewY(-0.78125deg)}
-77.7%{-webkit-transform:skewX(0.39063deg) skewY(0.39063deg);transform:skewX(0.39063deg) skewY(0.39063deg)}
+77.7%{-webkit-transform:skewX(0.39062deg) skewY(0.39062deg);transform:skewX(0.39062deg) skewY(0.39062deg)}
 88.8%{-webkit-transform:skewX(-0.19531deg) skewY(-0.19531deg);transform:skewX(-0.19531deg) skewY(-0.19531deg)}
 }.jello{-webkit-animation-name:jello;animation-name:jello;-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center}
 @-webkit-keyframes bounceIn{from,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);animation-timing-function:cubic-bezier(0.215,0.61,0.355,1)}
@@ -688,7 +688,7 @@ footer.entry-meta{margin-top:24px;font-size:13px;line-height:1.846153846;color:#
 .Cambria-Italic{font-family:Cambria-Italic;font-weight:normal;font-style:normal}
 html{box-sizing:border-box}
 *,*:before,*:after{box-sizing:inherit}
-body{background:#ecf8f8}
+body{background:#fff}
 blockquote,q{quotes:"" ""}
 blockquote:before,blockquote:after,q:before,q:after{content:""}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
