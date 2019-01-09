@@ -31,6 +31,12 @@
     <![endif]-->
     <script src="https://use.fontawesome.com/4945cee666.js"></script>
 <?php wp_head(); ?>
+
+<script> var _ctct_m = "9c3822df0b3a391dd4fa42a1f1b95cc9"; </script>
+                <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+                <!-- End Constant Contact Active Forms -->
+
+                
 </head>
 
 <body <?php body_class(); ?>>
