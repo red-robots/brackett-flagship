@@ -4,11 +4,13 @@
 	// float: left;
 	// width: 100%;
 	text-align: center;
+
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
 		text-align: center;
 		float: left;
 		background-color: $color-blue;
+		padding: 20px 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 

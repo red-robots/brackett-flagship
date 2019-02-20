@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: News
+ * Template Name: Knowledge Center
  *
  * 
  */
@@ -15,18 +15,19 @@ get_header(); ?>
 			<?php 	
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
-			'post_type'=>'post',
+			'post_type'=>'knowledge_center',
 			'posts_per_page' => 10,
 			'paged' => $paged,
 		));
 			if ($wp_query->have_posts()) : ?>
-	<section class="newsroll">
+			<section class="newsroll">
 			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 			
                 
 			     <div class="news-wrapper js-blocks">
 			        <div class="news">
 			        	<?php the_post_thumbnail("large");?>
+
 			            <h2><?php the_title(); ?></h2>
 			            
 			            <div class="entry-content">
@@ -34,23 +35,35 @@ get_header(); ?>
 			            	<?php the_excerpt(); ?>
 			            </div><!-- entry content -->
 			            
-			            <div class="seemore">
-			           	 <a href="<?php the_permalink(); ?>">Read Full Article</a>
-			            </div>
+			            <div class="seemore"><a href="<?php the_permalink(); ?>">Read More</a></div>
 			            
 			         </div><!-- property -->
 			     </div><!-- property-wrapper -->
                 
                 
+
 			<?php endwhile; // end of the loop. ?>
             <div class="clear"></div>
              <?php pagi_posts_nav(); ?>
              <div class="clear"></div>
-    </section>
+        </section>
+             <?php else: ?>
+				<h3>No Knowledge yet!</h3>
             <?php endif; ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-    <?php get_sidebar("news"); ?>
+    
+
+	
+	
+		
+
+
+
+	
+	
+
+
 </div><!-- wrapper -->
 <?php get_footer(); ?>

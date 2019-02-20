@@ -37,7 +37,8 @@ jQuery(document).ready(function ($) {
 	
 	$('.testimonial').flexslider({
 		animation: "slide",
-		smoothHeight: true
+		smoothHeight: true,
+		slideshowSpeed: 10000,
 	}); // end register flexslider
 	
 	// Colorbox

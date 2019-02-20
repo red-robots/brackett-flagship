@@ -108,6 +108,37 @@ function js_custom_init()
           // Register the Homepage Slides
   
 $labels = array(
+  'name' => _x('Knowledge Center', 'post type general name'),
+    'singular_name' => _x('Knowledge Center', 'post type singular name'),
+    'add_new' => _x('Add New', 'Knowledge Center'),
+    'add_new_item' => __('Add New Knowledge Center'),
+    'edit_item' => __('Edit Knowledge Center'),
+    'new_item' => __('New Knowledge Center'),
+    'view_item' => __('View Knowledge Center'),
+    'search_items' => __('Knowledge Center'),
+    'not_found' =>  __('No Knowledge Center found'),
+    'not_found_in_trash' => __('No Knowledge Center found in Trash'), 
+    'parent_item_colon' => '',
+    'menu_name' => 'Knowledge Center'
+  );
+  $args = array(
+  'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => false, 
+    'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
+    'menu_position' => 5,
+    'supports' => array('title','editor','custom-fields','thumbnail'),
+  
+  ); 
+  register_post_type('knowledge_center',$args); // name used in queryf
+
+  $labels = array(
   'name' => _x('Profiles', 'post type general name'),
     'singular_name' => _x('Profile', 'post type singular name'),
     'add_new' => _x('Add New', 'Profile'),
@@ -240,5 +271,18 @@ function build_taxonomies() {
 	'rewrite' => array( 'slug' => 'markets' ),
 	'_builtin' => true
 	) );
+
+    // cusotm tax
+    register_taxonomy( 'topic', 'knowledge_center',
+   array( 
+  'hierarchical' => true, // true = acts like categories false = acts like tags
+  'label' => 'Topic', 
+  'query_var' => true, 
+  'rewrite' => true ,
+  'show_admin_column' => true,
+  'public' => true,
+  'rewrite' => array( 'slug' => 'topic' ),
+  '_builtin' => true
+  ) );
 	
 } // End build taxonomies

@@ -22,3 +22,20 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin boxshadow() {
+	// -webkit-box-shadow: 0px 2px 17px -3px rgba(0,0,0,0.55);
+	// -moz-box-shadow: 0px 2px 17px -3px rgba(0,0,0,0.55);
+	// box-shadow: 0px 2px 17px -3px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.4);
+box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.4);
+}
+@mixin boxshadow-hover() {
+	// -webkit-box-shadow: 0px 2px 28px -3px rgba(0,0,0,0.72);
+	// -moz-box-shadow: 0px 2px 28px -3px rgba(0,0,0,0.72);
+	// box-shadow: 0px 2px 28px -3px rgba(0,0,0,0.72);
+	-webkit-box-shadow: 0px 3px 29px -3px rgba(0,0,0,0.72);
+-moz-box-shadow: 0px 3px 29px -3px rgba(0,0,0,0.72);
+box-shadow: 0px 3px 29px -3px rgba(0,0,0,0.72);
+}
