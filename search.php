@@ -25,7 +25,7 @@ $post_type = get_query_var('post_type');
                     <?php //the_content(); ?>
                 </div><!-- entry content -->
 
-		<?php if ($post->post_type == "property") { ?>
+		<?php if ($post->post_type == "knowledge_center") { ?>
 		<section class="newsroll">
 		<?php } ?>
 
@@ -124,7 +124,7 @@ $post_type = get_query_var('post_type');
                 
                 
 			<?php endwhile; ?>
-	<?php if ($post->post_type == "property") { ?>
+	<?php if ($post->post_type == "knowledge_center") { ?>
 		</section>
 	<?php } ?>
 
