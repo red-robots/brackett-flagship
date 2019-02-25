@@ -25,7 +25,9 @@ $post_type = get_query_var('post_type');
                     <?php //the_content(); ?>
                 </div><!-- entry content -->
 
-		
+		<?php if ($post->post_type == "property") { ?>
+		<section class="newsroll">
+		<?php  ?>
 
 			<?php //twentytwelve_content_nav( 'nav-above' ); ?>
 
@@ -122,6 +124,9 @@ $post_type = get_query_var('post_type');
                 
                 
 			<?php endwhile; ?>
+	<?php if ($post->post_type == "property") { ?>
+		</section>
+	<?php  ?>
 
 	<div class="clear"></div>
     <?php pagi_posts_nav(); ?>
