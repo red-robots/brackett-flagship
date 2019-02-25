@@ -1,3 +1,18 @@
+<?php 
+
+$post_type = get_query_var('post_type');   
+// echo '<pre>';
+// print_r($post_type);
+// echo '</pre>';
+// if($post_type[0] == 'knowledge_center') {
+// 	echo 'yeeesssss';
+// 	get_template_part('search-knowledgecenter');
+
+// } else {
+
+// 	get_template_part('search-properties');
+// }
+?>
 <?php
 /**
  * The template for displaying Search Results pages
@@ -7,13 +22,9 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); 
-
-$post_type = get_query_var('post_type'); 
-
-?>
+get_header(); ?>
 <div class="wrapper">
-	<section id="primary" class="site-content-full">
+	<section id="primary" class="site-content">
 		<div id="content" role="main">
 
 		<?php 
@@ -31,7 +42,6 @@ $post_type = get_query_var('post_type');
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				
                 
            <?php if ($post->post_type == "property") { 
@@ -147,6 +157,50 @@ $post_type = get_query_var('post_type');
     
     
     
-     
+        <div class="property-list">
+        
+         <div class="viewlistings-map">
+       		<a href="<?php bloginfo('url'); ?>/map">View listings by Map</a>
+       </div><!-- view listings -->
+
+       
+			<?php get_template_part('inc/property-search'); ?>
+       
+    	<div class="property-list-content">
+        	<h3>Filter Listings By</h3>
+            <ul class="listings">
+            <?php
+			$args = array(
+				'show_option_all'    => '',
+				'orderby'            => 'name',
+				'order'              => 'ASC',
+				'style'              => 'list',
+				'show_count'         => 0,
+				'hide_empty'         => 1,
+				'use_desc_for_title' => 0,
+				'child_of'           => 0,
+				'feed'               => '',
+				'feed_type'          => '',
+				'feed_image'         => '',
+				'exclude'            => '',
+				'exclude_tree'       => '',
+				'include'            => '',
+				'hierarchical'       => 1,
+				'title_li'           => __( '' ),
+				'show_option_none'   => __( '' ),
+				'number'             => null,
+				'echo'               => 1,
+				'depth'              => 0,
+				'current_category'   => 0,
+				'pad_counts'         => 0,
+				'taxonomy'           => 'markets',
+				'walker'             => null
+				);
+				wp_list_categories( $args );
+				
+				?>
+                </ul>
+ 	</div><!-- list -->
+    </div><!-- list -->
 </div><!-- wrapper -->
 <?php get_footer(); ?>

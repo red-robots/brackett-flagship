@@ -364,3 +364,31 @@ footer[role="contentinfo"] a:hover {
 section[role="banner"] {
 	margin-bottom: 48px;
 }
+textarea, select, input, button { outline: none; }
+.search {
+  width: 100%;
+  padding: 0 0 50px 0;
+  float: left;
+
+  input#s {
+    border-radius: 0;
+    text-shadow: none;
+    padding: 17px;
+    margin: 0;
+    line-height: 1;
+    font-size: 1rem;
+    float: left;
+    width: 30%;
+  }
+  input#searchsubmit {
+    border-radius: 0;
+    float: left;
+    font-size: 1rem;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 20px;
+    margin: 0;
+    line-height: 1;
+    border: 0;
+  }
+}

@@ -47,6 +47,14 @@
 
  		?>
 		</div>
+		<div class="widget">
+			<div class="news-contact-form">
+				<?php //gravity_form( 1, false, false, false, '', false );?>
+				<!-- Begin Constant Contact Inline Form Code -->
+				<div class="ctct-inline-form" data-form-id="47bcc169-a8a7-4405-b058-90e3f12e7595"></div>
+				<!-- End Constant Contact Inline Form Code -->
+			</div><!--.news-contact-form-->
+		</div>
 	</div>
 
 
@@ -65,7 +73,7 @@
 				<!-- Begin Constant Contact Inline Form Code -->
 				<div class="ctct-inline-form" data-form-id="47bcc169-a8a7-4405-b058-90e3f12e7595"></div>
 				<!-- End Constant Contact Inline Form Code -->
-			</div><!--.news-contact-form-->r
+			</div><!--.news-contact-form-->
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>

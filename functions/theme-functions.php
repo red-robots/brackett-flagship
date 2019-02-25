@@ -179,3 +179,27 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+
+
+/*
+
+	Which Search Form?
+
+
+*/
+// function template_chooser($template)   
+// {    
+//   global $wp_query;   
+//   $post_type = get_query_var('post_type');   
+//   if( $wp_query->is_search && $post_type == 'knowledge_center' )   
+//   {
+//     return locate_template('search-knowledgecenter.php');  
+//   } else {
+//   	return locate_template('search-properties.php');
+//   }
+
+//   return $template;   
+// }
+// add_filter('template_include', 'template_chooser');   
+
+

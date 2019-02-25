@@ -206,6 +206,7 @@ get_header(); ?>
 					/*echo '<pre>';
 					print_r($teamMember);
 					echo '</pre>';*/
+					$i=0;
 				   if( $teamMember ):
 				   // will probably have multiple
 					foreach( $teamMember as $post):
@@ -223,7 +224,7 @@ get_header(); ?>
 	$jobTitle = get_field('job_title');
 	$dPhone = get_field('direct_phone');
 	$mPhone = get_field('mobile_phone');
-	$oPHone = get_field('office_phone');
+	$oPhone = get_field('office_phone');
 	$email = get_field('email');
 	$obfsc = antispambot($email);
 	$vcard = get_field('vcard');
