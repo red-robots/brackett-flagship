@@ -13,7 +13,7 @@ get_header(); ?>
     	<h1><?php the_title(); ?></h1>
     	<div class="search">
     		<?php //get_search_form(); ?>
-    		<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
+    		<form role="search" action="<?php echo home_url('/'); ?>" method="get" id="searchform">
 	    		<input type="text" name="s" placeholder="Search the Knowledge Center" id="s" />
 	    		<input type="hidden" name="post_type" value="knowledge_center" />
 	    		<input type="submit" alt="Search" value="Search" id="searchsubmit" />

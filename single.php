@@ -9,14 +9,15 @@
 
 get_header(); ?>
 <div class="wrapper">
+	
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="entry-content">
-                <h1><?php the_title(); ?></h1>
-                <?php the_content(); ?>
+	                <h1><?php the_title(); ?></h1>
+	                <?php the_content(); ?>
                 </div><!-- entry content -->
 
 				<nav class="nav-single">
