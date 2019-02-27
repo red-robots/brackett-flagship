@@ -36,7 +36,7 @@
                 <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
                 <!-- End Constant Contact Active Forms -->
 
-                
+<link rel='stylesheet' id='twentytwelve-style-css'  href='<?php bloginfo('template_url'); ?>/style.css?ver=5' type='text/css' media='all' />  
 </head>
 
 <body <?php body_class(); ?>>

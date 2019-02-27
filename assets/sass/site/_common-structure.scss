@@ -28,6 +28,17 @@ body {
     padding-bottom: 0;
   }
 }
+.signuplink {
+  width: auto;
+  float: right;
+  a {
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    background-color: $color-red;
+  }
+}
 /* Page structure */
 .wrapper {
 	margin: 0px auto;

@@ -18,7 +18,14 @@ get_header(); ?>
 	    		<input type="hidden" name="post_type" value="knowledge_center" />
 	    		<input type="submit" alt="Search" value="Search" id="searchsubmit" />
     		</form>
+
+    		<div class="signuplink">
+	    		<a href="<?php bloginfo('url'); ?>/signup">Get the latest news from Flagship!</a>
+	    	</div>
+
+    	
     	</div>
+    	
     </div><!-- entry content -->
 			<?php 	
 			$wp_query = new WP_Query();
