@@ -24,7 +24,7 @@ get_header(); ?>
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
 			'post_type'=>'post',
-			'posts_per_page' => 10,
+			'posts_per_page' => 12,
 			'paged' => $paged,
 		));
 			if ($wp_query->have_posts()) : ?>
