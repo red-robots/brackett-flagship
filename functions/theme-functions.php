@@ -42,6 +42,13 @@ add_image_size('profile', 400, 400, array('center','center'));
 add_image_size('property', 400, 214, array('center','center'));
 add_image_size('rep-e', 400, 250, array('center','center'));
 
+function jberg_enable_vcard_upload( $mime_types=array() ){
+  	$mime_types['vcf'] = 'text/x-vcard';
+	$mime_types['vcard'] = 'text/x-vcard';
+  	return $mime_types;
+}
+add_filter('upload_mimes', 'jberg_enable_vcard_upload' );
+
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
