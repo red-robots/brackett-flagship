@@ -25,7 +25,7 @@
   */
 
 var project             = 'BrackettFlagship'; // Project Name.
-var projecturl          = 'http://localhost:8888/Bellaworks/bracket-flagship/site/bw/'; // Project URL. Could be something like localhost:8888.
+var projecturl          = 'http://bellaworks/flagship/'; // Project URL. Could be something like localhost:8888.
 
 
 var styleSRC            = './assets/sass/style.scss'; // Path to main .scss file.

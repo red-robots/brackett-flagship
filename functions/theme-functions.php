@@ -203,4 +203,123 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 // }
 // add_filter('template_include', 'template_chooser');   
 
+function get_experience_categories() {
+	global $wpdb;
+	$post_type = 'profile';
+	$posts = "{$wpdb->prefix}posts";
+	$postmeta = "{$wpdb->prefix}postmeta";
+	$query = "SELECT p.post_title,meta.* FROM {$wpdb->prefix}posts p, {$wpdb->prefix}postmeta meta WHERE p.ID=meta.post_id AND p.post_type='".$post_type."' AND p.post_status='publish' AND meta.meta_key='service_category' GROUP BY meta.meta_value";
+	$result = $wpdb->get_results($query);
+	$categories = array();
+	if($result) {
+		$objIDS = array();
+		$parentArrs = array();
+		foreach($result as $row) {
+			$metaVal = ($row->meta_value) ? @unserialize($row->meta_value) : '';
+			if($metaVal) {
+				foreach($metaVal as $id) {
+					$info = get_post($id);
+					if($info) {
+						$parent = $info->post_parent;
+						if($parent>0) {
+							$parentArrs[] = $parent;
+							$objIDS[] = $id;
+						}
+					}
+				}
+			}
+		}
+
+		$the_ids = ($objIDS) ? array_unique($objIDS) : '';
+		if($the_ids) {
+			foreach($the_ids as $p_id) {
+				$info = get_post($p_id);
+				$i_parent = $info->post_parent;
+				if( in_array($i_parent,$parentArrs) ) {
+					$arg = array(
+						'ID'=>$p_id,
+						'post_title'=>$info->post_title,
+						'post_parent'=>$info->post_parent,
+						'post_type'=>$info->post_type
+					);
+					$categories[] = $arg;
+				}
+			}
+		}
+	}
+
+	return $categories;
+}
+
+function get_experience_by_service_cat($catID=null) {
+	global $wpdb;
+	if(empty($catID)) return false;
+
+	$post_type = 'profile';
+	$posts = "{$wpdb->prefix}posts";
+	$postmeta = "{$wpdb->prefix}postmeta";
+	$query = "SELECT p.post_title,meta.* FROM {$wpdb->prefix}posts p, {$wpdb->prefix}postmeta meta WHERE p.ID=meta.post_id AND p.post_type='".$post_type."' AND p.post_status='publish' AND meta.meta_key='service_category'";
+	$result = $wpdb->get_results($query);
+	$thePosts = array();
+	if($result) {
+		$objIDS = array();
+		$parentArrs = array();
+		foreach($result as $row) {
+			$postID = $row->post_id;
+			$metaVal = ($row->meta_value) ? @unserialize($row->meta_value) : '';
+			if($metaVal) {
+				foreach($metaVal as $id) {
+					$info = get_post($id);
+					if($info) {
+						$parent = $info->post_parent;
+						if($parent>0) {
+							if($catID==$id) {
+								$thePosts[] = $postID;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	return ($thePosts) ? array_unique($thePosts) : '';
+}
+
+function next_and_previous_experience($currentPostID=null) {
+	if(empty($currentPostID)) return false;
+	$args = array(
+        'post_type'      => 'profile',
+        'posts_per_page' => -1,
+        'post_status'      => 'publish',
+        'orderby' => 'menu_order', 
+		'order' => 'ASC', 
+    );
+    $posts = get_posts($args);
+    $post_ids = array();
+    $prev_id = '';
+    $next_id = '';
+    $result = array();
+    if($posts) {
+    	$i=0; foreach($posts as $p) {
+    		$id = $p->ID;
+    		$post_ids[] = $p->ID;
+    		$i++;
+    	}
+
+  		if($post_ids) {
+  			$index = array_search($currentPostID, $post_ids);
+  			$prev = $index-1;
+  			$next = $index+1;
+
+  			$prev_id = ( isset($post_ids[$prev]) && $post_ids[$prev] ) ? $post_ids[$prev] : '';
+  			$next_id = ( isset($post_ids[$next]) && $post_ids[$next] ) ? $post_ids[$next] : '';
+  		}
+    }
+
+    if($prev_id || $next_id) {
+    	$result['prev_id'] = $prev_id;
+    	$result['next_id'] = $next_id;
+    } 
+    return $result;
+}
 

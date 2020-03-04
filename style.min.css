@@ -954,6 +954,7 @@ textarea,select,input,button{outline:0}
 .search{width:100%;padding:0 0 50px 0;float:left}
 .search input#s{border-radius:0;text-shadow:none;padding:17px;margin:0;line-height:1;font-size:1rem;float:left;width:30%}
 .search input#searchsubmit{border-radius:0;float:left;font-size:1rem;text-shadow:none;box-shadow:none;padding:20px;margin:0;line-height:1;border:0}
+a{-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .byline,.updated:not(.published){display:none}
@@ -1228,7 +1229,21 @@ section.newsroll{width:100%;position:relative}
 .close .question-image{background-position:-0 0}
 .answer{width:94%;padding:15px 3% 0 3%;float:left;margin:10px;font-family:Calibri,serif;font-size:14px;line-height:1.3;display:none;border-top:1px dotted #85101a}
 @media screen and (min-width:600px){.mobile-filter{display:none}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.profile-single-page #primary{width:100%;float:left}
+@media(min-width:350px){.profile-single-page #primary{width:70%}
+}.profile-single-page #sidebarr{width:100%;float:left;background-color:#ededed;border:1px solid #ceccd0;padding:15px;margin-top:50px}
+@media(min-width:350px){.profile-single-page #sidebarr{width:26%;float:right;margin:106px 0 0 0}
+}.profile-single-page #sidebarr h3{margin-bottom:24px;font-size:14px;font-family:'Source Serif Pro',serif;text-transform:uppercase;font-weight:300;color:#525261}
+.profile-single-page .details{padding-bottom:60px}
+.profile-single-page .sph-address{width:100%}
+.profile-single-page .description h3{margin:10px 0;color:#85101a;font-family:'Source Serif Pro',serif;font-size:18px}
+.widget-experience ul a{font-size:16px;display:inline-block;text-decoration:none;padding:2px 0}
+.experience-navi{width:100%;float:left;margin-bottom:30px}
+.experience-navi a{display:inline-block;text-decoration:none;color:#85101a;font-size:18px;line-height:1;padding:5px 0 2px;border-bottom:1px solid #85101a}
+.experience-navi a.prev{float:left}
+.experience-navi a.next{float:right}
+.experience-navi a:hover{color:#e05763;border-bottom-color:#e05763}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

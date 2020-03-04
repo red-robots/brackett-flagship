@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Representative Experience
+ * Template Name: Experience (Pop-Up)
  *
  *
  */
