@@ -216,6 +216,24 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 // }
 // add_filter('template_include', 'template_chooser');   
 
+
+function get_page_id_by_template($fileName) {
+    $page_id = 0;
+    if($fileName) {
+        $pages = get_pages(array(
+            'post_type' => 'page',
+            'meta_key' => '_wp_page_template',
+            'meta_value' => $fileName.'.php'
+        ));
+
+        if($pages) {
+            $row = $pages[0];
+            $page_id = $row->ID;
+        }
+    }
+    return $page_id;
+}
+
 function get_experience_categories() {
 	global $wpdb;
 	$post_type = 'profile';
@@ -335,4 +353,6 @@ function next_and_previous_experience($currentPostID=null) {
     } 
     return $result;
 }
+
+
 
