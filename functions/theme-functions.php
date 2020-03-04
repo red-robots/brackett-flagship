@@ -50,9 +50,11 @@ function my_login_logo() { ?>
 <style type="text/css">
   body.login div#login h1 a {
   	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-  	background-size: 360px 136px;
-  	width: 360px;
-  	height: 136px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+    height: 65px;
   }
 </style>
 <?php }
@@ -60,9 +62,20 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Change Link
 function loginpage_custom_link() {
-	return the_permalink();
+  return get_site_url();
 }
 add_filter('login_headerurl','loginpage_custom_link');
+
+function bella_login_logo_url_title() {
+    return get_bloginfo('name');
+}
+add_filter( 'login_headertitle', 'bella_login_logo_url_title' );
+
+add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
+function remove_wp_logo( $wp_admin_bar ) {
+  $wp_admin_bar->remove_node( 'wp-logo' );
+}
+
 
 /*-------------------------------------
 	Favicon.
