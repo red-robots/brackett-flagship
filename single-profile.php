@@ -12,6 +12,7 @@ $nav = next_and_previous_experience($postId);
 			$square_footage = get_field("square_footage");
             $address = get_field("address");
             $description = get_field("description"); 
+            $hasInfo = ($address || $square_footage) ? true : false;
 			?>
 		<div id="content" role="main">
 
