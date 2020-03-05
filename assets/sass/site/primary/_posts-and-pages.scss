@@ -49,11 +49,19 @@ a {
 }
 
 #primary.property-content {
-
-  @media screen and (min-width: $tabwidth) {
-    float: left;
-    width: 75.104166667%;
+  width: 100%;
+  float: left;
+  // @media screen and (min-width: $tabwidth) {
+  //   float: left;
+  //   width: 75.104166667%;
+  // }
+  @include tab {
+    width: 62%;
   }
+  @include mid {
+    width: 70%;
+  }
+
 }
 
 .service-list {
@@ -110,12 +118,17 @@ a {
 
 .property-list {
   width: 100%;
-  margin: 24px auto;
-  @media screen and (min-width: $tabwidth) {
-    width: 20%;
+  float: left;
+  margin: 20px auto 30px;
+  @include tab {
+    width: 34%;
     float: right;
     margin: 100px 0 0 0;
   }
+  @include mid {
+    width: 26%;
+  }
+
 }
 
 .property-list-content {
@@ -618,7 +631,7 @@ section.the-testis {
 /* = Team Page
 -------------------------------------------------------------- */
 .profile-first, .profile-last {
-  margin: 0 auto 30px auto;
+  // margin: 0 auto 30px auto;
 
 }
 
@@ -652,14 +665,28 @@ section.the-testis {
 }
 
 .profile-wrapper {
-  @media screen and (min-width: $tabwidth) {
+  max-width: 100%;
+  width: 100%;
+  float: left;
+  padding: 2px;
+  margin: 0 0 30px 0!important;
+  @include tab {
     width: 30%;
-    float: left;
-    padding: 2px;
+    margin-right: 24px!important;
   }
-  @media screen and (min-width: $deskwidth) {
-    width: 235px;
-  }
+
+  // @media screen and (min-width: $tabwidth) {
+  //   width: 30%;
+  //   float: left;
+  //   padding: 2px;
+  // }
+  // @media screen and (min-width: $deskwidth) {
+  //   width: 235px;
+  // }
+  // @include mid {
+  //   max-width: 235px;
+  //   width: 100%;
+  // }
 }
 
 .property-profile-wrapper {
@@ -667,9 +694,6 @@ section.the-testis {
     width: 45%;
     float: left;
     padding: 2px;
-    @media screen and (min-width: $deskwidth) {
-
-    }
   }
 }
 
