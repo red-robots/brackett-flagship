@@ -4,6 +4,9 @@ $postId = get_the_ID();
 $nav = next_and_previous_experience($postId);
 ?>
 <div class="wrapper profile-single-page">
+	<header class="pageheader">
+		<h1><?php the_title(); ?></h1>
+	</header>
 	<div id="primary" class="main-content property-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -17,7 +20,6 @@ $nav = next_and_previous_experience($postId);
 		<div id="content" role="main">
 
 			<div class="entry-content">
-				<h1><?php the_title(); ?></h1>
 				
 				<?php if ($image) { ?>
 				<div class="single-property-image">
@@ -27,16 +29,12 @@ $nav = next_and_previous_experience($postId);
 
 				<div class="single-property-details details">
 					<div class="single-property-header">
-                        <?php if($address) { ?>
-                            <div class="address sph-address">
-                                <?php echo $address;?>
-                            </div><!--.address-->
-                        <?php } ?>
-                        <?php if($square_footage) { ?>
-	                        <div class="square-footage sph-address">
-	                            <?php echo $square_footage;?>
-	                        </div><!--.square-footage-->
-	                    <?php } ?>
+						<?php if ($hasInfo) { ?>
+						<div class="address sph-address">
+							<?php if($address) { ?><span class="address"><?php echo $address;?></span><?php } ?>
+							<?php if($square_footage) { ?><span class="sqfoot"><?php echo $square_footage;?></span><?php } ?>
+						</div>
+						<?php } ?>
 					</div>
 					<?php if($description) { ?>
 	                    <div class="description copy">

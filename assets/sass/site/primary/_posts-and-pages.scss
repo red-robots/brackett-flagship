@@ -1633,12 +1633,40 @@ section.newsroll {
 }
 
 .profile-single-page {
+  .pageheader {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    @include tab {
+      padding-right: 38%;
+    }
+    @include mid {
+      padding-right: 30%;
+    }
+    h1 {
+      font-size: 24px;
+      line-height: 1.3;
+      font-family: 'Source Serif Pro', serif;
+      color: #262c77;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0;
+    }
+  }
   #primary {
     width: 100%;
     float: left;
-    @include xs {
+    padding-bottom: 10px;
+    margin-top: 0;
+    @include tab {
+      width: 62%;
+    }
+    @include mid {
       width: 70%;
     }
+  }
+  .entry-content {
+    margin-top: 0;
   }
   #sidebarr {
     width: 100%;
@@ -1646,11 +1674,13 @@ section.newsroll {
     background-color: #EDEDED;
     border: 1px solid #CECCD0;
     padding: 15px;
-    margin-top: 50px;
-    @include xs {
-      width: 26%;
+    margin:0 0 30px;
+    @include tab {
+      width: 34%;
       float: right;
-      margin: 106px 0 0 0;
+    }
+    @include mid {
+      width: 26%;
     }
     h3 {
       margin-bottom: 24px;
@@ -1662,11 +1692,34 @@ section.newsroll {
     }
   }
   .details {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
   .sph-address {
     width: 100%;
     color: #85101A;
+    span {
+      display: inline-block;
+      position: relative;
+      padding-right: 12px;
+      margin-right: 5px;
+      &:after {
+        content:"";
+        display: block;
+        width: 1px;
+        height: 20px;
+        background: #85101A;
+        position: absolute;
+        top: 3px;
+        right: 0;
+      }
+    }
+  }
+  .sph-address span:last-child {
+    padding-right: 0;
+    margin-right: 0;
+    &:after {
+      display: none;
+    }
   }
   .description {
     h3 {
