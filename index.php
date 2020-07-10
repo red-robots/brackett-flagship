@@ -59,6 +59,26 @@ if ( $the_query->have_posts() ) : ?>
 
 <?php wp_reset_postdata(); ?>
 
+	<?php
+	/* FEATURED VIDEO */
+	$featVideoLink = get_field("featured_video_url",505);
+	if($featVideoLink) {
+		$parts = parse_url($featVideoLink);
+		if(isset($parts['query']) && $parts['query']) {
+			$query = $parts['query'];
+			$params = array_filter(explode("v=",$query));
+			$vidPlaceholder = get_stylesheet_directory_uri() . "/images/rectangle.png";
+			if($params) { $videoId = end($params);  ?>
+			<div class="home-featured-video">
+				<div class="wrap">
+					<img src="<?php echo $vidPlaceholder ?>" alt="" aria-hidden="true" class="placeholder">
+					<iframe src="https://www.youtube.com/embed/<?php echo $videoId; ?>?feature=oembed&loop=0&rel=0&modestbranding=0&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<?php }
+		}
+	}
+	?>
 
 	<div class="main-home-content">
 		<div class="wrapper">

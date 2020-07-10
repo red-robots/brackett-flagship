@@ -1788,3 +1788,28 @@ section.newsroll {
     }
   }
 }
+
+.home-featured-video {
+  padding: 50px 30px 30px;
+  .wrap {
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  img.placeholder {
+    width: 100%;
+    height: auto;
+  }
+  iframe {
+    display: block;
+    max-width: 100%!important;
+    width: 100%!important;
+    max-height: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+}
