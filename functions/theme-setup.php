@@ -1,4 +1,4 @@
-<?php 
+<?php
 // setup theme
 function twentytwelve_setup() {
 
@@ -10,8 +10,8 @@ function twentytwelve_setup() {
 
 	// This theme supports a variety of post formats.
 	//add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
-	
-	
+
+
 }
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
 
@@ -76,11 +76,11 @@ function twentytwelve_scripts_styles() {
 		wp_enqueue_style( 'twentytwelve-fonts', esc_url_raw( $font_url ), array(), null );
 
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri(), array(), '5.2' );
-	
+	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri(), array(), '5.3' );
+
 	// Loads the Flexslider
 	// wp_enqueue_style( 'twentytwelve-flex', get_template_directory_uri() . '/css/flexslider.css', array( 'twentytwelve-style' ), '20121010' );
-	
+
 	// Loads the Pagination
 	// wp_enqueue_style( 'twentytwelve-pagination', get_template_directory_uri() . '/css/pagination.css', array( 'twentytwelve-style' ), '20121010' );
 
@@ -157,7 +157,7 @@ add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
  * Register sidebars.
  *
  * Registers our main widget area and the front page widget areas.
- 
+
  */
 function twentytwelve_widgets_init() {
 	register_sidebar( array(
@@ -175,7 +175,7 @@ add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 if ( ! function_exists( 'twentytwelve_content_nav' ) ) :
 /**
  * Displays navigation to next/previous pages when applicable.
- 
+
  */
 function twentytwelve_content_nav( $html_id ) {
 	global $wp_query;
@@ -307,7 +307,7 @@ endif;
  * Register postMessage support.
  *
  * Add postMessage support for site title and description for the Customizer.
- 
+
  */
 function twentytwelve_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
