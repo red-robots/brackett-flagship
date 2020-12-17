@@ -11,20 +11,20 @@
 		wp_enqueue_script('googlemaps');
 
 		wp_register_script(
-			'jquery', 
-			'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', 
-			'', 
-			'1.10.2', 
+			'jquery',
+			'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+			'',
+			'1.10.2',
 			true
 			);
 		wp_enqueue_script('jquery');
-		
+
 		// Homepage slider 'flexslider' scripts...
 		wp_register_script(
 			'flexslider',
 			get_bloginfo('template_directory') . '/assets/js/vendors.js',
-			array('jquery') , 
-			'1.0' , true 
+			array('jquery') ,
+			'1.0' , true
 			);
 		wp_enqueue_script('flexslider');
 
@@ -33,11 +33,11 @@
 		wp_register_script(
 			'custom',
 			get_bloginfo('template_directory') . '/assets/js/custom.js',
-			array('jquery'), '1.0' , 
-			true 
+			array('jquery'), '1.1' ,
+			true
 			);
 		wp_enqueue_script('custom');
-		
+
 	}
 }
 add_action('wp_enqueue_scripts', 'ineedmyjava');
