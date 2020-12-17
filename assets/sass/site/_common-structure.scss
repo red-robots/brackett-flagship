@@ -48,7 +48,7 @@ body {
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
-	
+
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
 	}
@@ -110,7 +110,7 @@ header#masthead {
 		float: left;
 		margin-top: 24px;
 	@media screen and (min-width: $tabwidth) {
-		
+
 	}
   &.left-column {
     @media screen and (min-width: $tabwidth) {
@@ -196,7 +196,7 @@ aside.right-column {
 .content-area {
 	width: 100%;
 	margin: 0px auto;
-	
+
 	@media screen and (min-width: $tabwidth) {
 		width: 66%;
 		float: left;
@@ -210,7 +210,7 @@ aside.right-column {
 .widget-area {
 	width: 100%;
 	margin: 24px 0 0;
-	
+
 	@media screen and (min-width: $tabwidth) {
 		float: right;
 		width: 26.041666667%;
@@ -283,7 +283,7 @@ aside.right-column {
 	text-align: center;
 	@media screen and (min-width: $tabwidth) {
 		width: auto;
-		float: right;	
+		float: right;
 		text-align: center;
         margin-top: 5px;
 	}
@@ -401,5 +401,82 @@ textarea, select, input, button { outline: none; }
     margin: 0;
     line-height: 1;
     border: 0;
+  }
+}
+.banner {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #98252b;
+  font-style: italic;
+  text-align: center;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.popup-boxz {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+  background-color: #fff;
+  overflow: hidden;
+  @media screen and (min-width: $tabwidth) {
+    width: 500px;
+  }
+  .body {
+    width: 80%;
+    padding: 20px 10%;
+    float: left;
+    line-height: 1.2;
+    span.header {
+      text-align: center;
+      width: auto;
+      display: inline-block;
+      span.name {
+        font-size: 20px;
+        width: 100%;
+        text-transform: uppercase;
+      }
+      span.date {
+        font-size: 14px;
+        width: 100%;
+        float: left;
+      }
+    }
+    .imgleft {
+      float: left;
+      margin: 0 15px 20px 0;
+    }
+  }
+  span.justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  span.smalltext {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.love {
+  width: 100%;
+  position: relative;
+  padding: 10px 0 20px 0;
+  z-index: 1;
+  .love-text {
+    h2 {
+      width: 100%;
+      text-align: center;
+      border-bottom: 2px solid #000;
+      line-height: 0.1em;
+      margin: 10px 0 20px;
+      font-size: 40px;
+      font-weight: 200;
+   }
+
+   h2 span {
+       background:#fff;
+       padding:0 10px;
+   }
   }
 }
