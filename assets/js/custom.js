@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
     rel: 'gal',
     inline: true,
     width: '90%',
-    maxWidth: '960px',
+    maxWidth: '550px',
     previous: "< Previous Project",
     next: "Next Project >",
     close: '<i class="fa fa-times" aria-hidden="true"></i>'
